@@ -1,0 +1,11 @@
+C:\Users\Radwan Altaf\Downloads\IOOP - C#\Assignment - Clubs MIS\Clubs_Management_System\bin\Debug\Clubs_Management_System.exe.config
+C:\Users\Radwan Altaf\Downloads\IOOP - C#\Assignment - Clubs MIS\Clubs_Management_System\bin\Debug\Clubs_Management_System.exe
+C:\Users\Radwan Altaf\Downloads\IOOP - C#\Assignment - Clubs MIS\Clubs_Management_System\bin\Debug\Clubs_Management_System.pdb
+C:\Users\Radwan Altaf\Downloads\IOOP - C#\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.csprojAssemblyReference.cache
+C:\Users\Radwan Altaf\Downloads\IOOP - C#\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.Properties.Resources.resources
+C:\Users\Radwan Altaf\Downloads\IOOP - C#\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.csproj.GenerateResource.cache
+C:\Users\Radwan Altaf\Downloads\IOOP - C#\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.csproj.CoreCompileInputs.cache
+C:\Users\Radwan Altaf\Downloads\IOOP - C#\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.exe
+C:\Users\Radwan Altaf\Downloads\IOOP - C#\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.pdb
+C:\Users\Radwan Altaf\Downloads\IOOP - C#\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.Dashboard.resources
+C:\Users\Radwan Altaf\Downloads\IOOP - C#\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.Login.resources
