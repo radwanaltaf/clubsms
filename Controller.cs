@@ -29,8 +29,8 @@ namespace Clubs_Management_System
         // A method which will verify if the user trying to log in exits in the database & allow log in if the reord exists. 
         public bool Login(User usr)
         {
-            string Em = usr.emailProp;
-            string Ps = usr.passwordProp;
+            string EmailParam = usr.emailProp;
+            string PasswordParam = usr.passwordProp;
             bool Succes = false;
 
             Connect();
@@ -39,8 +39,8 @@ namespace Clubs_Management_System
 
             SqlCommand cmd = new SqlCommand(loginQuerySql, conn);
             
-            cmd.Parameters.AddWithValue("@useremail", Em); // Giving the Paramter a value. 
-            cmd.Parameters.AddWithValue("@userpassword", Ps); // Giving the Paramter a value. 
+            cmd.Parameters.AddWithValue("@useremail", EmailParam); // Giving the Paramter a value. 
+            cmd.Parameters.AddWithValue("@userpassword", PasswordParam); // Giving the Paramter a value. 
 
             SqlDataReader dr = cmd.ExecuteReader();
 
