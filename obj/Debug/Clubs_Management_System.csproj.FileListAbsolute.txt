@@ -11,9 +11,28 @@ C:\Users\Radwan Altaf\Downloads\IOOP - C#\Assignment - Clubs MIS\Clubs_Managemen
 C:\Users\Radwan Altaf\Downloads\IOOP - C#\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.Login.resources
 C:\Users\Radwan Altaf\Downloads\IOOP - C#\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.DeregisterClub.resources
 C:\Users\Radwan Altaf\Downloads\IOOP - C#\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.SearchClubs.resources
-C:\Users\Radwan Altaf\Downloads\IOOP - C#\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.UpdateClubDescription.resources
 C:\Users\Radwan Altaf\Downloads\IOOP - C#\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.ClubsReport.resources
 C:\Users\Radwan Altaf\Downloads\IOOP - C#\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.RegisterClub.resources
 C:\Users\Radwan Altaf\Downloads\IOOP - C#\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.UpdateClub.resources
 C:\Users\Radwan Altaf\Downloads\IOOP - C#\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.ReportActivities.resources
 C:\Users\Radwan Altaf\Downloads\IOOP - C#\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.UpdateClubActivity.resources
+C:\Users\Radwan Altaf\Downloads\IOOP - C#\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.UpdateClubsDescription.resources
+C:\Users\start\OneDrive\Desktop\IOOP\Assignment - Clubs MIS Updated\Assignment - Clubs MIS\Clubs_Management_System\bin\Debug\Clubs_Management_System.exe.config
+C:\Users\start\OneDrive\Desktop\IOOP\Assignment - Clubs MIS Updated\Assignment - Clubs MIS\Clubs_Management_System\bin\Debug\Clubs_Management_System.exe
+C:\Users\start\OneDrive\Desktop\IOOP\Assignment - Clubs MIS Updated\Assignment - Clubs MIS\Clubs_Management_System\bin\Debug\Clubs_Management_System.pdb
+C:\Users\start\OneDrive\Desktop\IOOP\Assignment - Clubs MIS Updated\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.csprojAssemblyReference.cache
+C:\Users\start\OneDrive\Desktop\IOOP\Assignment - Clubs MIS Updated\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.ClubsReport.resources
+C:\Users\start\OneDrive\Desktop\IOOP\Assignment - Clubs MIS Updated\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.Dashboard.resources
+C:\Users\start\OneDrive\Desktop\IOOP\Assignment - Clubs MIS Updated\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.DeregisterClub.resources
+C:\Users\start\OneDrive\Desktop\IOOP\Assignment - Clubs MIS Updated\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.Login.resources
+C:\Users\start\OneDrive\Desktop\IOOP\Assignment - Clubs MIS Updated\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.Properties.Resources.resources
+C:\Users\start\OneDrive\Desktop\IOOP\Assignment - Clubs MIS Updated\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.RegisterClub.resources
+C:\Users\start\OneDrive\Desktop\IOOP\Assignment - Clubs MIS Updated\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.ReportActivities.resources
+C:\Users\start\OneDrive\Desktop\IOOP\Assignment - Clubs MIS Updated\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.SearchClubs.resources
+C:\Users\start\OneDrive\Desktop\IOOP\Assignment - Clubs MIS Updated\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.UpdateClub.resources
+C:\Users\start\OneDrive\Desktop\IOOP\Assignment - Clubs MIS Updated\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.UpdateClubActivity.resources
+C:\Users\start\OneDrive\Desktop\IOOP\Assignment - Clubs MIS Updated\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.UpdateClubsDescription.resources
+C:\Users\start\OneDrive\Desktop\IOOP\Assignment - Clubs MIS Updated\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.csproj.GenerateResource.cache
+C:\Users\start\OneDrive\Desktop\IOOP\Assignment - Clubs MIS Updated\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.csproj.CoreCompileInputs.cache
+C:\Users\start\OneDrive\Desktop\IOOP\Assignment - Clubs MIS Updated\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.exe
+C:\Users\start\OneDrive\Desktop\IOOP\Assignment - Clubs MIS Updated\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.pdb

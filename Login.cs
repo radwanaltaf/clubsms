@@ -25,20 +25,19 @@ namespace Clubs_Management_System
         {
             txtEmail.Select(); // Select the Email text box at the time of form load.
             cmbSelectRole.SelectedIndex = 0; // Select the firs item of the combo box at form load. 
+            this.WindowState = FormWindowState.Maximized;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 
         }
 
-
-
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void btnLogin_Click_1(object sender, EventArgs e)
         {
-
             U.emailProp = txtEmail.Text;
             U.passwordProp = txtPassword.Text;
 
             bool retVal = C.Login(U);
 
-            if(retVal == true)
+            if (retVal == true)
             {
                 MessageBox.Show("Successfull", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

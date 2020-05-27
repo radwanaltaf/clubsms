@@ -33,6 +33,9 @@
             this.cboClubName = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.lstClubInfo = new System.Windows.Forms.ListBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -54,9 +57,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(389, 448);
+            this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(214, 40);
+            this.label3.Size = new System.Drawing.Size(367, 40);
             this.label3.TabIndex = 5;
             this.label3.Text = "Club Name:";
             // 
@@ -66,9 +69,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cboClubName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboClubName.FormattingEnabled = true;
-            this.cboClubName.Location = new System.Drawing.Point(720, 451);
+            this.cboClubName.Location = new System.Drawing.Point(376, 3);
             this.cboClubName.Name = "cboClubName";
-            this.cboClubName.Size = new System.Drawing.Size(678, 50);
+            this.cboClubName.Size = new System.Drawing.Size(779, 50);
             this.cboClubName.TabIndex = 6;
             // 
             // btnSearch
@@ -90,10 +93,41 @@
             this.lstClubInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstClubInfo.FormattingEnabled = true;
             this.lstClubInfo.ItemHeight = 31;
-            this.lstClubInfo.Location = new System.Drawing.Point(720, 583);
+            this.lstClubInfo.Location = new System.Drawing.Point(376, 333);
             this.lstClubInfo.Name = "lstClubInfo";
-            this.lstClubInfo.Size = new System.Drawing.Size(678, 469);
+            this.lstClubInfo.Size = new System.Drawing.Size(779, 314);
             this.lstClubInfo.TabIndex = 8;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.21071F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.78929F));
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lstClubInfo, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.cboClubName, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(317, 398);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1158, 660);
+            this.tableLayoutPanel1.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(3, 330);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(367, 40);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Search Results:";
             // 
             // SearchClubs
             // 
@@ -101,15 +135,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1784, 1295);
-            this.Controls.Add(this.lstClubInfo);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.cboClubName);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.Name = "SearchClubs";
             this.Text = "Search Clubs";
             this.Load += new System.EventHandler(this.SearchClubs_Load);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -121,5 +154,7 @@
         private System.Windows.Forms.ComboBox cboClubName;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ListBox lstClubInfo;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label1;
     }
 }

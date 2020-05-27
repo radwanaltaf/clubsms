@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clubs_Management_System", "Clubs_Management_System.csproj", "{2200B6FB-177F-498B-B143-4A8F49F61B66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssignmentScreens", "..\..\..\AssignmentScreensZIP\AssignmentScreens\AssignmentScreens.csproj", "{9585B446-8925-429D-A7D7-C5E8AF2DC7D2}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{2200B6FB-177F-498B-B143-4A8F49F61B66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2200B6FB-177F-498B-B143-4A8F49F61B66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2200B6FB-177F-498B-B143-4A8F49F61B66}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9585B446-8925-429D-A7D7-C5E8AF2DC7D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9585B446-8925-429D-A7D7-C5E8AF2DC7D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9585B446-8925-429D-A7D7-C5E8AF2DC7D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9585B446-8925-429D-A7D7-C5E8AF2DC7D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -103,11 +103,11 @@
     <Compile Include="UpdateClubActivity.Designer.cs">
       <DependentUpon>UpdateClubActivity.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateClubDescription.cs">
+    <Compile Include="UpdateClubsDescription.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateClubDescription.Designer.cs">
-      <DependentUpon>UpdateClubDescription.cs</DependentUpon>
+    <Compile Include="UpdateClubsDescription.Designer.cs">
+      <DependentUpon>UpdateClubsDescription.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
     <EmbeddedResource Include="ClubsReport.resx">
@@ -146,8 +146,8 @@
     <EmbeddedResource Include="UpdateClubActivity.resx">
       <DependentUpon>UpdateClubActivity.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateClubDescription.resx">
-      <DependentUpon>UpdateClubDescription.cs</DependentUpon>
+    <EmbeddedResource Include="UpdateClubsDescription.resx">
+      <DependentUpon>UpdateClubsDescription.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

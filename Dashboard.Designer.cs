@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStripMain = new System.Windows.Forms.MenuStrip();
+            this.loginToolStripLogin = new System.Windows.Forms.ToolStripMenuItem();
             this.searchClubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerClubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateClubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,8 +42,10 @@
             this.updateClubsActivitiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateClubsDescriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStripMain.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -53,9 +57,9 @@
             // menuStripMain
             // 
             this.menuStripMain.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStripMain.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStripMain.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.loginToolStripLogin,
             this.searchClubToolStripMenuItem,
             this.registerClubToolStripMenuItem,
             this.updateClubToolStripMenuItem,
@@ -64,23 +68,30 @@
             this.activitiesReportToolStripMenuItem,
             this.updateClubsActivitiesToolStripMenuItem,
             this.updateClubsDescriptionToolStripMenuItem});
-            this.menuStripMain.Location = new System.Drawing.Point(29, 0);
+            this.menuStripMain.Location = new System.Drawing.Point(92, 0);
             this.menuStripMain.Name = "menuStripMain";
-            this.menuStripMain.Size = new System.Drawing.Size(2431, 53);
+            this.menuStripMain.Size = new System.Drawing.Size(2310, 53);
             this.menuStripMain.TabIndex = 1;
             this.menuStripMain.Text = "menuStrip1";
+            this.menuStripMain.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStripMain_ItemClicked);
+            // 
+            // loginToolStripLogin
+            // 
+            this.loginToolStripLogin.Name = "loginToolStripLogin";
+            this.loginToolStripLogin.Size = new System.Drawing.Size(119, 49);
+            this.loginToolStripLogin.Text = "Login";
             // 
             // searchClubToolStripMenuItem
             // 
             this.searchClubToolStripMenuItem.Name = "searchClubToolStripMenuItem";
-            this.searchClubToolStripMenuItem.Size = new System.Drawing.Size(187, 44);
+            this.searchClubToolStripMenuItem.Size = new System.Drawing.Size(208, 49);
             this.searchClubToolStripMenuItem.Text = "Search Club";
             this.searchClubToolStripMenuItem.Click += new System.EventHandler(this.searchClubToolStripMenuItem_Click);
             // 
             // registerClubToolStripMenuItem
             // 
             this.registerClubToolStripMenuItem.Name = "registerClubToolStripMenuItem";
-            this.registerClubToolStripMenuItem.Size = new System.Drawing.Size(205, 44);
+            this.registerClubToolStripMenuItem.Size = new System.Drawing.Size(229, 49);
             this.registerClubToolStripMenuItem.Text = "Register Club";
             this.registerClubToolStripMenuItem.Click += new System.EventHandler(this.registerClubToolStripMenuItem_Click);
             // 
@@ -94,14 +105,14 @@
             // deregisterClubToolStripMenuItem
             // 
             this.deregisterClubToolStripMenuItem.Name = "deregisterClubToolStripMenuItem";
-            this.deregisterClubToolStripMenuItem.Size = new System.Drawing.Size(234, 44);
+            this.deregisterClubToolStripMenuItem.Size = new System.Drawing.Size(261, 49);
             this.deregisterClubToolStripMenuItem.Text = "Deregister Club";
             this.deregisterClubToolStripMenuItem.Click += new System.EventHandler(this.deregisterClubToolStripMenuItem_Click);
             // 
             // clubReportToolStripMenuItem
             // 
             this.clubReportToolStripMenuItem.Name = "clubReportToolStripMenuItem";
-            this.clubReportToolStripMenuItem.Size = new System.Drawing.Size(188, 44);
+            this.clubReportToolStripMenuItem.Size = new System.Drawing.Size(209, 49);
             this.clubReportToolStripMenuItem.Text = "Club Report";
             this.clubReportToolStripMenuItem.Click += new System.EventHandler(this.clubReportToolStripMenuItem_Click);
             // 
@@ -122,7 +133,7 @@
             // updateClubsDescriptionToolStripMenuItem
             // 
             this.updateClubsDescriptionToolStripMenuItem.Name = "updateClubsDescriptionToolStripMenuItem";
-            this.updateClubsDescriptionToolStripMenuItem.Size = new System.Drawing.Size(368, 44);
+            this.updateClubsDescriptionToolStripMenuItem.Size = new System.Drawing.Size(410, 49);
             this.updateClubsDescriptionToolStripMenuItem.Text = "Update Club\'s Description";
             this.updateClubsDescriptionToolStripMenuItem.Click += new System.EventHandler(this.updateClubsDescriptionToolStripMenuItem_Click);
             // 
@@ -133,20 +144,34 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.menuStripMain, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(2490, 55);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(2495, 84);
             this.tableLayoutPanel1.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(2405, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(87, 78);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2490, 578);
+            this.ClientSize = new System.Drawing.Size(2495, 756);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStripMain;
             this.Name = "Dashboard";
@@ -157,6 +182,7 @@
             this.menuStripMain.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -174,6 +200,8 @@
         private System.Windows.Forms.ToolStripMenuItem updateClubsActivitiesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateClubsDescriptionToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.ToolStripMenuItem loginToolStripLogin;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

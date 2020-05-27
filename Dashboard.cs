@@ -14,16 +14,16 @@ namespace Clubs_Management_System
     {
         DeregisterClub formChildDeregister;
         SearchClubs formChildSearchStudent;
-        UpdateClubDescription formChildUpdateClubDesc;
+        UpdateClubsDescription formChildUpdateClubDesc;
         ClubsReport formChildClubsReport;
         RegisterClub formChildRegisterClub;
         UpdateClub formChildUpdateClub;
         ReportActivities formChildActivitiesReport;
         UpdateClubActivity formChildUpdateClubActivity;
+        Login formChildLogin;
         public Dashboard()
         {
             InitializeComponent();
-//          menuStripMain.Items[0].Visible = false;
             
         }
 
@@ -38,6 +38,21 @@ namespace Clubs_Management_System
         private void Dashboard_Load(object sender, EventArgs e)
         {
 
+//            menuStripMain.Items[1].Visible = false;
+//            menuStripMain.Items[2].Visible = false;
+//            menuStripMain.Items[3].Visible = false;
+//            menuStripMain.Items[4].Visible = false;
+//            menuStripMain.Items[5].Visible = false;
+//            menuStripMain.Items[6].Visible = false;
+//            menuStripMain.Items[7].Visible = false;
+//            menuStripMain.Items[8].Visible = false;
+
+            formChildLogin = new Login();
+            formChildLogin.MdiParent = this;
+            formChildLogin.Dock = DockStyle.Fill;
+            formChildLogin.Show();
+
+
         }
 
         private void searchClubToolStripMenuItem_Click(object sender, EventArgs e)
@@ -50,7 +65,7 @@ namespace Clubs_Management_System
 
         private void updateClubsDescriptionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            formChildUpdateClubDesc = new UpdateClubDescription();
+            formChildUpdateClubDesc = new UpdateClubsDescription();
             formChildUpdateClubDesc.MdiParent = this;
             formChildUpdateClubDesc.Dock = DockStyle.Fill;
             formChildUpdateClubDesc.Show();
@@ -94,6 +109,19 @@ namespace Clubs_Management_System
             formChildUpdateClubActivity.MdiParent = this;
             formChildUpdateClubActivity.Dock = DockStyle.Fill;
             formChildUpdateClubActivity.Show();
+        }
+
+        private void menuStripMain_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            formChildLogin = new Login();
+            formChildLogin.MdiParent = this;
+            formChildLogin.Dock = DockStyle.Fill;
+            formChildLogin.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

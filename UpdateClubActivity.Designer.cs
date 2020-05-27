@@ -36,6 +36,8 @@
             this.updatedActivityLstbox = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnUpdateClubActivity = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
@@ -55,10 +57,10 @@
             this.txtClubAct.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtClubAct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClubAct.Location = new System.Drawing.Point(970, 567);
+            this.txtClubAct.Location = new System.Drawing.Point(556, 242);
             this.txtClubAct.Multiline = true;
             this.txtClubAct.Name = "txtClubAct";
-            this.txtClubAct.Size = new System.Drawing.Size(845, 233);
+            this.txtClubAct.Size = new System.Drawing.Size(1080, 137);
             this.txtClubAct.TabIndex = 18;
             this.txtClubAct.Text = "Update Club Activity";
             // 
@@ -66,7 +68,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(406, 667);
+            this.label1.Location = new System.Drawing.Point(3, 239);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(295, 37);
             this.label1.TabIndex = 16;
@@ -76,7 +78,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(406, 419);
+            this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(238, 37);
             this.label2.TabIndex = 15;
@@ -87,9 +89,9 @@
             this.dateOfActivity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dateOfActivity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateOfActivity.Location = new System.Drawing.Point(970, 407);
+            this.dateOfActivity.Location = new System.Drawing.Point(556, 3);
             this.dateOfActivity.Name = "dateOfActivity";
-            this.dateOfActivity.Size = new System.Drawing.Size(845, 44);
+            this.dateOfActivity.Size = new System.Drawing.Size(1080, 44);
             this.dateOfActivity.TabIndex = 19;
             // 
             // updatedActivityLstbox
@@ -99,16 +101,16 @@
             this.updatedActivityLstbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updatedActivityLstbox.FormattingEnabled = true;
             this.updatedActivityLstbox.ItemHeight = 37;
-            this.updatedActivityLstbox.Location = new System.Drawing.Point(970, 896);
+            this.updatedActivityLstbox.Location = new System.Drawing.Point(556, 595);
             this.updatedActivityLstbox.Name = "updatedActivityLstbox";
-            this.updatedActivityLstbox.Size = new System.Drawing.Size(845, 189);
+            this.updatedActivityLstbox.Size = new System.Drawing.Size(1080, 300);
             this.updatedActivityLstbox.TabIndex = 20;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(406, 963);
+            this.label4.Location = new System.Drawing.Point(3, 592);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(256, 37);
             this.label4.TabIndex = 21;
@@ -119,31 +121,48 @@
             this.btnUpdateClubActivity.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnUpdateClubActivity.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnUpdateClubActivity.Font = new System.Drawing.Font("Segoe UI Historic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateClubActivity.Location = new System.Drawing.Point(0, 1116);
+            this.btnUpdateClubActivity.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnUpdateClubActivity.Location = new System.Drawing.Point(0, 1277);
             this.btnUpdateClubActivity.Name = "btnUpdateClubActivity";
-            this.btnUpdateClubActivity.Size = new System.Drawing.Size(2458, 177);
+            this.btnUpdateClubActivity.Size = new System.Drawing.Size(2458, 224);
             this.btnUpdateClubActivity.TabIndex = 22;
             this.btnUpdateClubActivity.Text = "Click Here or Hit Enter To Update Club Activity";
             this.btnUpdateClubActivity.UseVisualStyleBackColor = false;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.8011F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.1989F));
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.dateOfActivity, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.updatedActivityLstbox, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txtClubAct, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(468, 371);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.57343F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.16084F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1639, 900);
+            this.tableLayoutPanel1.TabIndex = 23;
             // 
             // UpdateClubActivity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2458, 1293);
+            this.ClientSize = new System.Drawing.Size(2458, 1501);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btnUpdateClubActivity);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.updatedActivityLstbox);
-            this.Controls.Add(this.dateOfActivity);
-            this.Controls.Add(this.txtClubAct);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Name = "UpdateClubActivity";
             this.Text = "Update Club Activity";
             this.Load += new System.EventHandler(this.UpdateClubActivity_Load);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -157,5 +176,6 @@
         private System.Windows.Forms.ListBox updatedActivityLstbox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnUpdateClubActivity;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
