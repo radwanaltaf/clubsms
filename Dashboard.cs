@@ -13,31 +13,83 @@ namespace Clubs_Management_System
 {
     public partial class Dashboard : Form
     {
-        Styling Styles = new Styling();
-        DashboardScreens DBScreen = new DashboardScreens();
+        Controller Cntrl = new Controller();
+        private Styling Styles = new Styling();
+        private readonly DashboardScreens DBScreen = new DashboardScreens();
         public Dashboard()
         {
             InitializeComponent();
-            
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            //menuStripMain.Items[1].Visible = false;
-            //menuStripMain.Items[2].Visible = false;
-            //menuStripMain.Items[3].Visible = false;
-            //menuStripMain.Items[4].Visible = false;
-            //menuStripMain.Items[5].Visible = false;
-            //menuStripMain.Items[6].Visible = false;
-            //menuStripMain.Items[7].Visible = false;
-            //menuStripMain.Items[8].Visible = false;
+            menuStripMain.Items[0].Visible = false;
+            menuStripMain.Items[1].Visible = false;
+            menuStripMain.Items[2].Visible = false;
+            menuStripMain.Items[3].Visible = false;
+            menuStripMain.Items[4].Visible = false;
+            menuStripMain.Items[5].Visible = false;
+            menuStripMain.Items[6].Visible = false;
+            menuStripMain.Items[7].Visible = false;
 
-            if (DBScreen.LoginChild == null || DBScreen.LoginChild.IsDisposed)
+            if(role.UserRole == "admin")
             {
-                DBScreen.LoginChild = new Login(); //Initializing an Object
-                DBScreen.LoginChild.MdiParent = this; //the frmchild is refering to the Register_Club and MdiParent is holding the frmChild to (this) Dashboard
+                Cntrl.DisplayMenuAdmin(updateClubDescItem: updateClubsDescriptionToolStripMenuItem,
+                    updateClubActivity: updateClubsActivitiesToolStripMenuItem, 
+                    searchItem: searchClubToolStripMenuItem,
+                    registerItem: registerClubToolStripMenuItem,
+                    deregisterItem: deregisterClubToolStripMenuItem,
+                    updateClubItem: updateClubToolStripMenuItem,
+                    clubReportItem: clubReportToolStripMenuItem,
+                    activityReportItem: activitiesReportToolStripMenuItem);
+
+                //Load & Display the Search Screen by default on App load
+                if (DBScreen.SearchChild == null || DBScreen.SearchChild.IsDisposed)
+                {
+                    DBScreen.SearchChild = new SearchClubs();
+                    DBScreen.SearchChild.MdiParent = this;
+                }
+                Styles.DashboardShowScreen(DBScreen.SearchChild);
             }
-            Styles.DashboardShowScreen(DBScreen.LoginChild); //Calling a method in the Styles Class
+            else if(role.UserRole == "secretary")
+            {
+                Cntrl.DisplayMenuSecretary(updateClubDescItem: updateClubsDescriptionToolStripMenuItem, 
+                    updateClubActivity: updateClubsActivitiesToolStripMenuItem,
+                    searchItem: searchClubToolStripMenuItem,
+                    registerItem: registerClubToolStripMenuItem,
+                    deregisterItem: deregisterClubToolStripMenuItem,
+                    updateClubItem: updateClubToolStripMenuItem,
+                    clubReportItem: clubReportToolStripMenuItem,
+                    activityReportItem: activitiesReportToolStripMenuItem);
+
+                //Load & Display the Update Club Activity Screen by default on App load
+                if (DBScreen.UpdateClubActivityChild == null || DBScreen.UpdateClubActivityChild.IsDisposed)
+                {
+                    DBScreen.UpdateClubActivityChild = new UpdateClubActivity();
+                    DBScreen.UpdateClubActivityChild.MdiParent = this;
+                }
+                Styles.DashboardShowScreen(DBScreen.UpdateClubActivityChild);
+            }
+            else
+            {
+                Cntrl.DisplayMenuStudent(updateClubDescItem: updateClubsDescriptionToolStripMenuItem,
+                    updateClubActivity: updateClubsActivitiesToolStripMenuItem,
+                    searchItem: searchClubToolStripMenuItem,
+                    registerItem: registerClubToolStripMenuItem,
+                    deregisterItem: deregisterClubToolStripMenuItem,
+                    updateClubItem: updateClubToolStripMenuItem,
+                    clubReportItem: clubReportToolStripMenuItem,
+                    activityReportItem: activitiesReportToolStripMenuItem);
+
+                //Load & Display the Search Screen by default on App load
+                if (DBScreen.SearchChild == null || DBScreen.SearchChild.IsDisposed)
+                {
+                    DBScreen.SearchChild = new SearchClubs();
+                    DBScreen.SearchChild.MdiParent = this;
+                }
+                Styles.DashboardShowScreen(DBScreen.SearchChild);
+            }
+    
         }
 
         private void deregisterClubToolStripMenuItem_Click(object sender, EventArgs e)
@@ -124,12 +176,7 @@ namespace Clubs_Management_System
 
         private void menuStripMain_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-          if (DBScreen.LoginChild == null || DBScreen.LoginChild.IsDisposed)
-            {
-                DBScreen.LoginChild = new Login();
-                DBScreen.LoginChild.MdiParent = this;
-            }
-            Styles.DashboardShowScreen(DBScreen.LoginChild);
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

@@ -7,16 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace Clubs_Management_System
 {
     public partial class Login : Form
     {
         DashboardScreens DBScreen = new DashboardScreens();
-        User U = new User();
-        Controller C = new Controller();
-
+        User Usr = new User();
+        Controller Cntrl = new Controller();
         public Login()
         {
             InitializeComponent();
@@ -26,22 +24,22 @@ namespace Clubs_Management_System
         {
             txtEmail.Select(); // Select the Email text box at the time of form load.
             cmbSelectRole.SelectedIndex = 0; // Select the firs item of the combo box at form load. 
-            this.WindowState = FormWindowState.Maximized;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-
         }
 
-        private void btnLogin_Click_1(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-            U.emailProp = txtEmail.Text;
-            U.passwordProp = txtPassword.Text;
+            Usr.emailProp = txtEmail.Text;
+            Usr.passwordProp = txtPassword.Text;
+            Usr.roleProp = cmbSelectRole.SelectedItem.ToString();
 
-            bool retVal = C.Login(U);
+            bool retVal = Cntrl.Login(Usr);
 
             if (retVal == true)
             {
-
-                //MessageBox.Show("Successfull", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Dashboard D = new Dashboard();
+                D.Show();
+                D.Focus();
+                MessageBox.Show("Welcome " + User.firstNameProp, "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -53,6 +51,11 @@ namespace Clubs_Management_System
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
             DBScreen.LoginChild = null;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -86,6 +86,7 @@
     <Compile Include="ReportActivities.Designer.cs">
       <DependentUpon>ReportActivities.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserRole.cs" />
     <Compile Include="SearchClubs.cs">
       <SubType>Form</SubType>
     </Compile>

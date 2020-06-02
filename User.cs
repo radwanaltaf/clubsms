@@ -10,40 +10,19 @@ namespace Clubs_Management_System
     {
         private string _emailID;
         private string _pswd;
-        private string _firstName;
-        private string _lastname;
+        private static string _firstName;
+        private static string _lastname;
         private string _role;
 
-        public string emailProp
-        {
-            get { return _emailID; }
-            set { _emailID = value; }
-        }
+        public string emailProp { get => _emailID; set => _emailID = value; }
 
-        public string passwordProp
-        {
-            get { return _pswd; }
-            set { _pswd = value; }
-        }
+        public string passwordProp { get => _pswd; set => _pswd = value; }
 
-        public string firstNameProp
-        {
-            get { return _firstName; }
-            set { _firstName = value; }
-        }
+        public static string firstNameProp { get => _firstName; set => _firstName = value; }
 
-        public string lastNameProp
-        {
-            get { return _lastname; }
-            set { _lastname = value; }
-        }
+        public static string lastNameProp { get => _lastname; set => _lastname = value; }
 
-        public string roleProp
-        {
-            get { return _role; }
-            set { _role = value; }
-        }
-
+        public string roleProp { get => _role; set => _role = value; }
 
     }
 }
