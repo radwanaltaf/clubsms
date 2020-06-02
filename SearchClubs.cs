@@ -12,6 +12,8 @@ namespace Clubs_Management_System
 {
     public partial class SearchClubs : Form
     {
+        DashboardScreens DBScreen = new DashboardScreens();
+
         public SearchClubs()
         {
             InitializeComponent();
@@ -21,6 +23,11 @@ namespace Clubs_Management_System
         {
             this.WindowState = FormWindowState.Maximized;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+        }
+
+        private void SearchClubs_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DBScreen.SearchChild = null;
         }
     }
 }

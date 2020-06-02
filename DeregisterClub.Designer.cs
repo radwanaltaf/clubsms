@@ -156,6 +156,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Deregister Club";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DeregisterClub_FormClosing);
             this.Load += new System.EventHandler(this.DeregisterClub_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

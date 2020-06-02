@@ -26,7 +26,7 @@ namespace Clubs_Management_System
             }
         }
 
-        // A method which will verify if the user trying to log in exits in the database & allow log in if the reord exists. 
+        // A method which will verify if the user trying to log in exists in the database & allow log in if the reord exists. 
         public bool Login(User usr)
         {
             string EmailParam = usr.emailProp;
@@ -54,6 +54,8 @@ namespace Clubs_Management_System
             conn.Close();
             return Succes;
         }
+
+
 
     }
 }

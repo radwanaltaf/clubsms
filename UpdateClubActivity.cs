@@ -12,6 +12,7 @@ namespace Clubs_Management_System
 {
     public partial class UpdateClubActivity : Form
     {
+        DashboardScreens DBScreen = new DashboardScreens();
         public UpdateClubActivity()
         {
             InitializeComponent();
@@ -21,6 +22,11 @@ namespace Clubs_Management_System
         {
             this.WindowState = FormWindowState.Maximized;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+        }
+
+        private void UpdateClubActivity_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DBScreen.UpdateClubActivityChild = null;
         }
     }
 }

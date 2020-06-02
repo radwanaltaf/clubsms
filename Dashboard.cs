@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,111 +13,123 @@ namespace Clubs_Management_System
 {
     public partial class Dashboard : Form
     {
-        DeregisterClub formChildDeregister;
-        SearchClubs formChildSearchStudent;
-        UpdateClubsDescription formChildUpdateClubDesc;
-        ClubsReport formChildClubsReport;
-        RegisterClub formChildRegisterClub;
-        UpdateClub formChildUpdateClub;
-        ReportActivities formChildActivitiesReport;
-        UpdateClubActivity formChildUpdateClubActivity;
-        Login formChildLogin;
+        Styling Styles = new Styling();
+        DashboardScreens DBScreen = new DashboardScreens();
         public Dashboard()
         {
             InitializeComponent();
             
         }
 
-        private void deregisterClubToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            formChildDeregister = new DeregisterClub();            
-            formChildDeregister.MdiParent = this; //the frmchild is refering to the Register_Club and MdiParent is holding the frmChild to (this) Dashboard
-            formChildDeregister.Dock = DockStyle.Fill;
-            formChildDeregister.Show();
-        }
-
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            //menuStripMain.Items[1].Visible = false;
+            //menuStripMain.Items[2].Visible = false;
+            //menuStripMain.Items[3].Visible = false;
+            //menuStripMain.Items[4].Visible = false;
+            //menuStripMain.Items[5].Visible = false;
+            //menuStripMain.Items[6].Visible = false;
+            //menuStripMain.Items[7].Visible = false;
+            //menuStripMain.Items[8].Visible = false;
 
-//            menuStripMain.Items[1].Visible = false;
-//            menuStripMain.Items[2].Visible = false;
-//            menuStripMain.Items[3].Visible = false;
-//            menuStripMain.Items[4].Visible = false;
-//            menuStripMain.Items[5].Visible = false;
-//            menuStripMain.Items[6].Visible = false;
-//            menuStripMain.Items[7].Visible = false;
-//            menuStripMain.Items[8].Visible = false;
+            if (DBScreen.LoginChild == null || DBScreen.LoginChild.IsDisposed)
+            {
+                DBScreen.LoginChild = new Login(); //Initializing an Object
+                DBScreen.LoginChild.MdiParent = this; //the frmchild is refering to the Register_Club and MdiParent is holding the frmChild to (this) Dashboard
+            }
+            Styles.DashboardShowScreen(DBScreen.LoginChild); //Calling a method in the Styles Class
+        }
 
-            formChildLogin = new Login();
-            formChildLogin.MdiParent = this;
-            formChildLogin.Dock = DockStyle.Fill;
-            formChildLogin.Show();
-
+        private void deregisterClubToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(DBScreen.DeregisterChild == null || DBScreen.DeregisterChild.IsDisposed)
+            {
+                DBScreen.DeregisterChild = new DeregisterClub();
+                DBScreen.DeregisterChild.MdiParent = this; 
+            }
+            Styles.DashboardShowScreen(DBScreen.DeregisterChild);
 
         }
 
         private void searchClubToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            formChildSearchStudent = new SearchClubs();
-            formChildSearchStudent.MdiParent = this;
-            formChildSearchStudent.Dock = DockStyle.Fill;
-            formChildSearchStudent.Show();
+            if (DBScreen.SearchChild == null || DBScreen.SearchChild.IsDisposed)
+            {
+                DBScreen.SearchChild = new SearchClubs();
+                DBScreen.SearchChild.MdiParent = this; 
+            }
+            Styles.DashboardShowScreen(DBScreen.SearchChild);
         }
 
         private void updateClubsDescriptionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            formChildUpdateClubDesc = new UpdateClubsDescription();
-            formChildUpdateClubDesc.MdiParent = this;
-            formChildUpdateClubDesc.Dock = DockStyle.Fill;
-            formChildUpdateClubDesc.Show();
+            if (DBScreen.UpdateClubDescChild == null || DBScreen.UpdateClubDescChild.IsDisposed)
+            {
+                DBScreen.UpdateClubDescChild = new UpdateClubsDescription();
+                DBScreen.UpdateClubDescChild.MdiParent = this; 
+            }
+            Styles.DashboardShowScreen(DBScreen.UpdateClubDescChild);
         }
 
         private void clubReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            formChildClubsReport = new ClubsReport();
-            formChildClubsReport.MdiParent = this;
-            formChildClubsReport.Dock = DockStyle.Fill;
-            formChildClubsReport.Show();
+            if (DBScreen.ClubsReportChild == null || DBScreen.ClubsReportChild.IsDisposed)
+            {
+                DBScreen.ClubsReportChild = new ClubsReport();
+                DBScreen.ClubsReportChild.MdiParent = this;
+            }
+            Styles.DashboardShowScreen(DBScreen.ClubsReportChild);
         }
 
         private void registerClubToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            formChildRegisterClub = new RegisterClub();
-            formChildRegisterClub.MdiParent = this;
-            formChildRegisterClub.Dock = DockStyle.Fill;
-            formChildRegisterClub.Show();
+            if (DBScreen.RegisterChild == null || DBScreen.RegisterChild.IsDisposed)
+            {
+                DBScreen.RegisterChild = new RegisterClub();
+                DBScreen.RegisterChild.MdiParent = this;
+            }
+            Styles.DashboardShowScreen(DBScreen.RegisterChild);
         }
 
         private void updateClubToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            formChildUpdateClub = new UpdateClub();
-            formChildUpdateClub.MdiParent = this;
-            formChildUpdateClub.Dock = DockStyle.Fill;
-            formChildUpdateClub.Show();
+            if (DBScreen.UpdateClubChild == null || DBScreen.UpdateClubChild.IsDisposed)
+            {
+                DBScreen.UpdateClubChild = new UpdateClub();
+                DBScreen.UpdateClubChild.MdiParent = this;
+            }
+            Styles.DashboardShowScreen(DBScreen.UpdateClubChild);
+
         }
 
         private void activitiesReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            formChildActivitiesReport = new ReportActivities();
-            formChildActivitiesReport.MdiParent = this;
-            formChildActivitiesReport.Dock = DockStyle.Fill;
-            formChildActivitiesReport.Show();
+            if (DBScreen.ReportActivitiesChild == null || DBScreen.ReportActivitiesChild.IsDisposed)
+            {
+                DBScreen.ReportActivitiesChild = new ReportActivities();
+                DBScreen.ReportActivitiesChild.MdiParent = this;
+            }
+            Styles.DashboardShowScreen(DBScreen.ReportActivitiesChild);
         }
 
         private void updateClubsActivitiesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            formChildUpdateClubActivity = new UpdateClubActivity();
-            formChildUpdateClubActivity.MdiParent = this;
-            formChildUpdateClubActivity.Dock = DockStyle.Fill;
-            formChildUpdateClubActivity.Show();
+            if (DBScreen.UpdateClubActivityChild == null || DBScreen.UpdateClubActivityChild.IsDisposed)
+            {
+                DBScreen.UpdateClubActivityChild = new UpdateClubActivity();
+                DBScreen.UpdateClubActivityChild.MdiParent = this;
+            }
+            Styles.DashboardShowScreen(DBScreen.UpdateClubActivityChild);
         }
 
         private void menuStripMain_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            formChildLogin = new Login();
-            formChildLogin.MdiParent = this;
-            formChildLogin.Dock = DockStyle.Fill;
-            formChildLogin.Show();
+          if (DBScreen.LoginChild == null || DBScreen.LoginChild.IsDisposed)
+            {
+                DBScreen.LoginChild = new Login();
+                DBScreen.LoginChild.MdiParent = this;
+            }
+            Styles.DashboardShowScreen(DBScreen.LoginChild);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

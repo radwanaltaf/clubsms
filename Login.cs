@@ -13,6 +13,7 @@ namespace Clubs_Management_System
 {
     public partial class Login : Form
     {
+        DashboardScreens DBScreen = new DashboardScreens();
         User U = new User();
         Controller C = new Controller();
 
@@ -39,13 +40,19 @@ namespace Clubs_Management_System
 
             if (retVal == true)
             {
-                MessageBox.Show("Successfull", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //MessageBox.Show("Successfull", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 MessageBox.Show("Failed", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+        }
+
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DBScreen.LoginChild = null;
         }
     }
 }

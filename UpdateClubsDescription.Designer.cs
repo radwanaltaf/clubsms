@@ -41,10 +41,10 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1, 0);
-            this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label4.Location = new System.Drawing.Point(2, 0);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(422, 36);
+            this.label4.Size = new System.Drawing.Size(633, 56);
             this.label4.TabIndex = 15;
             this.label4.Text = "Club Description:";
             // 
@@ -53,20 +53,20 @@
             this.txtClubDesc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtClubDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClubDesc.Location = new System.Drawing.Point(426, 1);
-            this.txtClubDesc.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.txtClubDesc.Location = new System.Drawing.Point(639, 2);
+            this.txtClubDesc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtClubDesc.Name = "txtClubDesc";
-            this.txtClubDesc.Size = new System.Drawing.Size(659, 177);
+            this.txtClubDesc.Size = new System.Drawing.Size(988, 274);
             this.txtClubDesc.TabIndex = 19;
             this.txtClubDesc.Text = "";
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1, 220);
-            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label1.Location = new System.Drawing.Point(2, 344);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(422, 72);
+            this.label1.Size = new System.Drawing.Size(633, 112);
             this.label1.TabIndex = 20;
             this.label1.Text = "Updated Club Description:";
             // 
@@ -77,10 +77,10 @@
             this.btnUpdateClubDesc.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnUpdateClubDesc.Font = new System.Drawing.Font("Segoe UI Historic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateClubDesc.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnUpdateClubDesc.Location = new System.Drawing.Point(0, 654);
-            this.btnUpdateClubDesc.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnUpdateClubDesc.Location = new System.Drawing.Point(0, 1022);
+            this.btnUpdateClubDesc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUpdateClubDesc.Name = "btnUpdateClubDesc";
-            this.btnUpdateClubDesc.Size = new System.Drawing.Size(1283, 134);
+            this.btnUpdateClubDesc.Size = new System.Drawing.Size(1924, 209);
             this.btnUpdateClubDesc.TabIndex = 24;
             this.btnUpdateClubDesc.Text = "Click Here or Hit Enter To Update Club Description";
             this.btnUpdateClubDesc.UseVisualStyleBackColor = false;
@@ -91,9 +91,9 @@
             this.label3.Font = new System.Drawing.Font("Times New Roman", 25.875F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1283, 136);
+            this.label3.Size = new System.Drawing.Size(1924, 212);
             this.label3.TabIndex = 23;
             this.label3.Text = "Update Club\'s Description";
             this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -104,11 +104,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lstUpdatedDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstUpdatedDesc.FormattingEnabled = true;
-            this.lstUpdatedDesc.ItemHeight = 25;
-            this.lstUpdatedDesc.Location = new System.Drawing.Point(427, 222);
-            this.lstUpdatedDesc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lstUpdatedDesc.ItemHeight = 37;
+            this.lstUpdatedDesc.Location = new System.Drawing.Point(640, 347);
             this.lstUpdatedDesc.Name = "lstUpdatedDesc";
-            this.lstUpdatedDesc.Size = new System.Drawing.Size(657, 204);
+            this.lstUpdatedDesc.Size = new System.Drawing.Size(986, 300);
             this.lstUpdatedDesc.TabIndex = 21;
             // 
             // tableLayoutPanel1
@@ -122,26 +121,25 @@
             this.tableLayoutPanel1.Controls.Add(this.lstUpdatedDesc, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtClubDesc, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(71, 192);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(106, 300);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1086, 441);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1629, 689);
             this.tableLayoutPanel1.TabIndex = 25;
             // 
             // UpdateClubsDescription
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1283, 788);
+            this.ClientSize = new System.Drawing.Size(1924, 1231);
             this.Controls.Add(this.btnUpdateClubDesc);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UpdateClubsDescription";
             this.Text = "UpdateClubsDescription";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UpdateClubsDescription_FormClosing);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

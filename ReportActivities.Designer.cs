@@ -39,11 +39,12 @@
             this.gridClubActivities.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridClubActivities.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridClubActivities.Location = new System.Drawing.Point(41, 201);
+            this.gridClubActivities.Location = new System.Drawing.Point(62, 314);
+            this.gridClubActivities.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridClubActivities.Name = "gridClubActivities";
             this.gridClubActivities.RowHeadersWidth = 51;
             this.gridClubActivities.RowTemplate.Height = 24;
-            this.gridClubActivities.Size = new System.Drawing.Size(1123, 452);
+            this.gridClubActivities.Size = new System.Drawing.Size(1684, 706);
             this.gridClubActivities.TabIndex = 16;
             // 
             // label3
@@ -52,9 +53,8 @@
             this.label3.Font = new System.Drawing.Font("Times New Roman", 25.875F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1283, 173);
+            this.label3.Size = new System.Drawing.Size(1924, 270);
             this.label3.TabIndex = 15;
             this.label3.Text = "Report on Club Activities For the Week";
             this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -65,25 +65,24 @@
             this.btnReportActivities.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnReportActivities.Font = new System.Drawing.Font("Segoe UI Historic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportActivities.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnReportActivities.Location = new System.Drawing.Point(0, 658);
-            this.btnReportActivities.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReportActivities.Location = new System.Drawing.Point(0, 1028);
             this.btnReportActivities.Name = "btnReportActivities";
-            this.btnReportActivities.Size = new System.Drawing.Size(1283, 113);
+            this.btnReportActivities.Size = new System.Drawing.Size(1924, 177);
             this.btnReportActivities.TabIndex = 17;
             this.btnReportActivities.Text = "Click Here or Hit Enter To Generate a Report";
             this.btnReportActivities.UseVisualStyleBackColor = false;
             // 
             // ReportActivities
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1283, 771);
+            this.ClientSize = new System.Drawing.Size(1924, 1205);
             this.Controls.Add(this.btnReportActivities);
             this.Controls.Add(this.gridClubActivities);
             this.Controls.Add(this.label3);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ReportActivities";
             this.Text = "Report";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ReportActivities_FormClosing);
             this.Load += new System.EventHandler(this.ReportActivities_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridClubActivities)).EndInit();
             this.ResumeLayout(false);

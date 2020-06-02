@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Clubs_Management_System
 {
     public partial class DeregisterClub : Form
     {
+        DashboardScreens DBScreen = new DashboardScreens();
         public DeregisterClub()
         {
             InitializeComponent();
@@ -29,6 +23,9 @@ namespace Clubs_Management_System
 
         }
 
-
+        private void DeregisterClub_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DBScreen.DeregisterChild = null;
+        }
     }
 }

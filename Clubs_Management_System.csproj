@@ -59,6 +59,7 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="DashboardScreens.cs" />
     <Compile Include="DeregisterClub.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +92,7 @@
     <Compile Include="SearchClubs.Designer.cs">
       <DependentUpon>SearchClubs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Styling.cs" />
     <Compile Include="UpdateClub.cs">
       <SubType>Form</SubType>
     </Compile>

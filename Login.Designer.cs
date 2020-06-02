@@ -46,9 +46,8 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 22.125F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1202, 154);
+            this.label1.Size = new System.Drawing.Size(1923, 246);
             this.label1.TabIndex = 0;
             this.label1.Text = "Please Login:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -58,10 +57,9 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(2, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(199, 29);
+            this.label2.Size = new System.Drawing.Size(319, 46);
             this.label2.TabIndex = 1;
             this.label2.Text = "Select Role:";
             // 
@@ -77,10 +75,9 @@
             "Admin",
             "Club Secretary",
             "Student"});
-            this.cmbSelectRole.Location = new System.Drawing.Point(205, 2);
-            this.cmbSelectRole.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbSelectRole.Location = new System.Drawing.Point(328, 3);
             this.cmbSelectRole.Name = "cmbSelectRole";
-            this.cmbSelectRole.Size = new System.Drawing.Size(583, 33);
+            this.cmbSelectRole.Size = new System.Drawing.Size(933, 45);
             this.cmbSelectRole.TabIndex = 2;
             // 
             // label3
@@ -88,10 +85,9 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(2, 149);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(3, 239);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(199, 29);
+            this.label3.Size = new System.Drawing.Size(319, 46);
             this.label3.TabIndex = 3;
             this.label3.Text = "Email:";
             // 
@@ -100,11 +96,10 @@
             this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(205, 151);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Location = new System.Drawing.Point(328, 242);
             this.txtEmail.MaxLength = 20;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(583, 30);
+            this.txtEmail.Size = new System.Drawing.Size(933, 44);
             this.txtEmail.TabIndex = 4;
             // 
             // label4
@@ -112,10 +107,9 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(2, 304);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(3, 487);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(199, 29);
+            this.label4.Size = new System.Drawing.Size(319, 46);
             this.label4.TabIndex = 5;
             this.label4.Text = "Password:";
             // 
@@ -126,10 +120,9 @@
             this.btnLogin.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI Historic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLogin.Location = new System.Drawing.Point(0, 489);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogin.Location = new System.Drawing.Point(0, 1080);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(1202, 170);
+            this.btnLogin.Size = new System.Drawing.Size(1923, 272);
             this.btnLogin.TabIndex = 11;
             this.btnLogin.Text = "Click Here or Hit Enter To Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -148,14 +141,13 @@
             this.loginTableLayout.Controls.Add(this.txtEmail, 1, 1);
             this.loginTableLayout.Controls.Add(this.label4, 0, 2);
             this.loginTableLayout.Controls.Add(this.label3, 0, 1);
-            this.loginTableLayout.Location = new System.Drawing.Point(120, 203);
-            this.loginTableLayout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.loginTableLayout.Location = new System.Drawing.Point(192, 325);
             this.loginTableLayout.Name = "loginTableLayout";
             this.loginTableLayout.RowCount = 3;
             this.loginTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49F));
             this.loginTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51F));
-            this.loginTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.loginTableLayout.Size = new System.Drawing.Size(790, 341);
+            this.loginTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
+            this.loginTableLayout.Size = new System.Drawing.Size(1264, 546);
             this.loginTableLayout.TabIndex = 12;
             // 
             // txtPassword
@@ -163,31 +155,30 @@
             this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(205, 306);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Location = new System.Drawing.Point(328, 490);
             this.txtPassword.MaxLength = 25;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '#';
-            this.txtPassword.Size = new System.Drawing.Size(583, 30);
+            this.txtPassword.Size = new System.Drawing.Size(933, 44);
             this.txtPassword.TabIndex = 6;
             // 
             // Login
             // 
             this.AcceptButton = this.btnLogin;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1202, 659);
+            this.ClientSize = new System.Drawing.Size(1923, 1352);
             this.Controls.Add(this.loginTableLayout);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
             this.Load += new System.EventHandler(this.Login_Load);
             this.loginTableLayout.ResumeLayout(false);
             this.loginTableLayout.PerformLayout();

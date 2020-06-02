@@ -57,10 +57,10 @@
             this.txtClubAct.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtClubAct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClubAct.Location = new System.Drawing.Point(556, 242);
+            this.txtClubAct.Location = new System.Drawing.Point(557, 242);
             this.txtClubAct.Multiline = true;
             this.txtClubAct.Name = "txtClubAct";
-            this.txtClubAct.Size = new System.Drawing.Size(1080, 137);
+            this.txtClubAct.Size = new System.Drawing.Size(1079, 137);
             this.txtClubAct.TabIndex = 18;
             this.txtClubAct.Text = "Update Club Activity";
             // 
@@ -89,9 +89,9 @@
             this.dateOfActivity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dateOfActivity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateOfActivity.Location = new System.Drawing.Point(556, 3);
+            this.dateOfActivity.Location = new System.Drawing.Point(557, 3);
             this.dateOfActivity.Name = "dateOfActivity";
-            this.dateOfActivity.Size = new System.Drawing.Size(1080, 44);
+            this.dateOfActivity.Size = new System.Drawing.Size(1079, 44);
             this.dateOfActivity.TabIndex = 19;
             // 
             // updatedActivityLstbox
@@ -101,9 +101,9 @@
             this.updatedActivityLstbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updatedActivityLstbox.FormattingEnabled = true;
             this.updatedActivityLstbox.ItemHeight = 37;
-            this.updatedActivityLstbox.Location = new System.Drawing.Point(556, 595);
+            this.updatedActivityLstbox.Location = new System.Drawing.Point(557, 595);
             this.updatedActivityLstbox.Name = "updatedActivityLstbox";
-            this.updatedActivityLstbox.Size = new System.Drawing.Size(1080, 300);
+            this.updatedActivityLstbox.Size = new System.Drawing.Size(1079, 300);
             this.updatedActivityLstbox.TabIndex = 20;
             // 
             // label4
@@ -159,6 +159,7 @@
             this.Controls.Add(this.label3);
             this.Name = "UpdateClubActivity";
             this.Text = "Update Club Activity";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UpdateClubActivity_FormClosing);
             this.Load += new System.EventHandler(this.UpdateClubActivity_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

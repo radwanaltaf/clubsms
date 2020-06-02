@@ -141,6 +141,7 @@
             this.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.Name = "SearchClubs";
             this.Text = "Search Clubs";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SearchClubs_FormClosing);
             this.Load += new System.EventHandler(this.SearchClubs_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

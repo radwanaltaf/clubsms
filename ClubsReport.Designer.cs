@@ -40,9 +40,8 @@
             this.label3.Font = new System.Drawing.Font("Times New Roman", 25.875F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1283, 154);
+            this.label3.Size = new System.Drawing.Size(1924, 241);
             this.label3.TabIndex = 13;
             this.label3.Text = "Report on Clubs";
             this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -52,12 +51,12 @@
             this.gridClubs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridClubs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridClubs.Location = new System.Drawing.Point(43, 254);
-            this.gridClubs.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.gridClubs.Location = new System.Drawing.Point(64, 397);
+            this.gridClubs.Margin = new System.Windows.Forms.Padding(8, 5, 8, 5);
             this.gridClubs.Name = "gridClubs";
             this.gridClubs.RowHeadersWidth = 51;
             this.gridClubs.RowTemplate.Height = 24;
-            this.gridClubs.Size = new System.Drawing.Size(1143, 373);
+            this.gridClubs.Size = new System.Drawing.Size(1714, 583);
             this.gridClubs.TabIndex = 14;
             // 
             // btnReportClubs
@@ -66,25 +65,24 @@
             this.btnReportClubs.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnReportClubs.Font = new System.Drawing.Font("Segoe UI Historic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportClubs.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnReportClubs.Location = new System.Drawing.Point(0, 657);
-            this.btnReportClubs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReportClubs.Location = new System.Drawing.Point(0, 1026);
             this.btnReportClubs.Name = "btnReportClubs";
-            this.btnReportClubs.Size = new System.Drawing.Size(1283, 113);
+            this.btnReportClubs.Size = new System.Drawing.Size(1924, 177);
             this.btnReportClubs.TabIndex = 18;
             this.btnReportClubs.Text = "Click Here or Hit Enter To Generate a Report";
             this.btnReportClubs.UseVisualStyleBackColor = false;
             // 
             // ClubsReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1283, 770);
+            this.ClientSize = new System.Drawing.Size(1924, 1203);
             this.Controls.Add(this.btnReportClubs);
             this.Controls.Add(this.gridClubs);
             this.Controls.Add(this.label3);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ClubsReport";
             this.Text = "Report";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClubsReport_FormClosing);
             this.Load += new System.EventHandler(this.ClubsReport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridClubs)).EndInit();
             this.ResumeLayout(false);
