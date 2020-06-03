@@ -48,10 +48,8 @@
             // 
             // txtRegClubDesc
             // 
-            this.txtRegClubDesc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtRegClubDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRegClubDesc.Location = new System.Drawing.Point(402, 568);
+            this.txtRegClubDesc.Location = new System.Drawing.Point(683, 683);
             this.txtRegClubDesc.Multiline = true;
             this.txtRegClubDesc.Name = "txtRegClubDesc";
             this.txtRegClubDesc.Size = new System.Drawing.Size(873, 109);
@@ -60,10 +58,8 @@
             // 
             // txtSecName
             // 
-            this.txtSecName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSecName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSecName.Location = new System.Drawing.Point(402, 455);
+            this.txtSecName.Location = new System.Drawing.Point(683, 547);
             this.txtSecName.Name = "txtSecName";
             this.txtSecName.Size = new System.Drawing.Size(873, 44);
             this.txtSecName.TabIndex = 33;
@@ -71,10 +67,8 @@
             // 
             // txtVpName
             // 
-            this.txtVpName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtVpName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVpName.Location = new System.Drawing.Point(402, 342);
+            this.txtVpName.Location = new System.Drawing.Point(683, 411);
             this.txtVpName.Name = "txtVpName";
             this.txtVpName.Size = new System.Drawing.Size(873, 44);
             this.txtVpName.TabIndex = 32;
@@ -82,10 +76,8 @@
             // 
             // txtPresName
             // 
-            this.txtPresName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPresName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPresName.Location = new System.Drawing.Point(402, 229);
+            this.txtPresName.Location = new System.Drawing.Point(683, 275);
             this.txtPresName.Name = "txtPresName";
             this.txtPresName.Size = new System.Drawing.Size(873, 44);
             this.txtPresName.TabIndex = 31;
@@ -93,10 +85,8 @@
             // 
             // txtClubName
             // 
-            this.txtClubName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtClubName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClubName.Location = new System.Drawing.Point(402, 116);
+            this.txtClubName.Location = new System.Drawing.Point(683, 139);
             this.txtClubName.Name = "txtClubName";
             this.txtClubName.Size = new System.Drawing.Size(873, 44);
             this.txtClubName.TabIndex = 30;
@@ -108,9 +98,9 @@
             this.btnUpdateClubAdmin.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnUpdateClubAdmin.Font = new System.Drawing.Font("Segoe UI Historic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateClubAdmin.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnUpdateClubAdmin.Location = new System.Drawing.Point(0, 899);
+            this.btnUpdateClubAdmin.Location = new System.Drawing.Point(0, 1275);
             this.btnUpdateClubAdmin.Name = "btnUpdateClubAdmin";
-            this.btnUpdateClubAdmin.Size = new System.Drawing.Size(1924, 156);
+            this.btnUpdateClubAdmin.Size = new System.Drawing.Size(2469, 207);
             this.btnUpdateClubAdmin.TabIndex = 29;
             this.btnUpdateClubAdmin.Text = "Click Here or Hit Enter To Update";
             this.btnUpdateClubAdmin.UseVisualStyleBackColor = false;
@@ -122,7 +112,7 @@
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(0, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(1924, 166);
+            this.label7.Size = new System.Drawing.Size(2469, 227);
             this.label7.TabIndex = 28;
             this.label7.Text = "Update a Club";
             this.label7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -131,7 +121,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 565);
+            this.label5.Location = new System.Drawing.Point(3, 680);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(270, 37);
             this.label5.TabIndex = 26;
@@ -141,7 +131,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 452);
+            this.label4.Location = new System.Drawing.Point(3, 544);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(279, 37);
             this.label4.TabIndex = 25;
@@ -151,7 +141,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 339);
+            this.label3.Location = new System.Drawing.Point(3, 408);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(349, 37);
             this.label3.TabIndex = 24;
@@ -161,7 +151,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 226);
+            this.label2.Location = new System.Drawing.Point(3, 272);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(278, 37);
             this.label2.TabIndex = 23;
@@ -171,7 +161,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 113);
+            this.label1.Location = new System.Drawing.Point(3, 136);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(187, 37);
             this.label1.TabIndex = 22;
@@ -183,7 +173,7 @@
             this.cmbClub.FormattingEnabled = true;
             this.cmbClub.Items.AddRange(new object[] {
             "-Select Club"});
-            this.cmbClub.Location = new System.Drawing.Point(402, 3);
+            this.cmbClub.Location = new System.Drawing.Point(683, 3);
             this.cmbClub.Name = "cmbClub";
             this.cmbClub.Size = new System.Drawing.Size(710, 45);
             this.cmbClub.TabIndex = 37;
@@ -200,11 +190,9 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.22385F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.77615F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.12573F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.87427F));
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtRegClubDesc, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.cmbClub, 1, 0);
@@ -217,7 +205,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 3);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(297, 230);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(503, 326);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -226,14 +214,14 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1278, 680);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1616, 819);
             this.tableLayoutPanel1.TabIndex = 38;
             // 
             // UpdateClub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.ClientSize = new System.Drawing.Size(2469, 1482);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btnUpdateClubAdmin);
             this.Controls.Add(this.label7);

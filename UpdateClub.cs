@@ -13,6 +13,7 @@ namespace Clubs_Management_System
     public partial class UpdateClub : Form
     {
         DashboardScreens DBScreen = new DashboardScreens();
+        Controller cntrl = new Controller();
 
         public UpdateClub()
         {
@@ -24,7 +25,8 @@ namespace Clubs_Management_System
             this.WindowState = FormWindowState.Maximized;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             cmbClub.SelectedIndex = 0;
-
+            List<string> acc = cntrl.DisplayAllClubs();
+            cmbClub.Items.AddRange(acc.Cast<Object>().ToArray());
         }
 
         private void UpdateClub_FormClosing(object sender, FormClosingEventArgs e)

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Drawing.Imaging;
 using System.Linq;
@@ -46,6 +48,7 @@ namespace Clubs_Management_System
 
             SqlDataReader dr = cmd.ExecuteReader();
 
+            //Check if a record matches & store the user role of that record in a static property
             if(dr.HasRows)
             {
                 while (dr.Read())
@@ -109,6 +112,47 @@ namespace Clubs_Management_System
             updateClubItem.Visible = false;
             clubReportItem.Visible = false;
             activityReportItem.Visible = false;
+        }
+
+        public int RegisterClub(string clubsname, string presidentsname, string vicepresidentsname, string secretarysname, string description, DateTime registerdate)
+        {
+            int status = 0;
+            string registerSQLQuery = "INSERT INTO Clubs VALUES(@_clubsname, @_presidentsname, @_vicepresidentsname, @_secretarysname, @_clubsdescription, @_registerdate)";
+            Connect();
+            SqlCommand cmd = new SqlCommand(registerSQLQuery, conn);
+            cmd.Parameters.AddWithValue("@_clubsname", clubsname);
+            cmd.Parameters.AddWithValue("@_presidentsname", presidentsname);
+            cmd.Parameters.AddWithValue("@_vicepresidentsname", vicepresidentsname);
+            cmd.Parameters.AddWithValue("@_secretarysname", secretarysname);
+            cmd.Parameters.AddWithValue("@_clubsdescription", description);
+            cmd.Parameters.AddWithValue("@_registerdate", registerdate);
+
+            status = cmd.ExecuteNonQuery();
+
+            return status;
+        }
+
+
+        public List<String> DisplayAllClubs(ComboBox cmb)
+        {
+            SqlDataAdapter da;
+            DataSet ds;
+            Connect();
+            string retreiveAllClubNames = "SELECT Club_Name FROM Clubs";
+
+
+            da = new SqlDataAdapter(retreiveAllClubNames, conn);
+            ds = new DataSet();
+            DataTable clubsdt = new DataTable();
+            da.Fill(clubsdt);
+
+            for (int i = 0; i < ds.Tables["Clubs"].Rows.Count; i++)
+                {
+                    AllClubs.Clubs.Add(ds.Tables["Clubs"].Rows[i].ToString());                  
+                }
+
+            return AllClubs.Clubs;
+            
         }
 
     }
