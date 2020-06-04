@@ -87,6 +87,12 @@
     <Compile Include="ReportActivities.Designer.cs">
       <DependentUpon>ReportActivities.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateClub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateClub.Designer.cs">
+      <DependentUpon>UpdateClub.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserRole.cs" />
     <Compile Include="SearchClubs.cs">
       <SubType>Form</SubType>
@@ -95,12 +101,6 @@
       <DependentUpon>SearchClubs.cs</DependentUpon>
     </Compile>
     <Compile Include="Styling.cs" />
-    <Compile Include="UpdateClub.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UpdateClub.Designer.cs">
-      <DependentUpon>UpdateClub.cs</DependentUpon>
-    </Compile>
     <Compile Include="UpdateClubActivity.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,11 +144,11 @@
     <EmbeddedResource Include="SearchClubs.resx">
       <DependentUpon>SearchClubs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateClub.resx">
-      <DependentUpon>UpdateClub.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UpdateClubActivity.resx">
       <DependentUpon>UpdateClubActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateClub.resx">
+      <DependentUpon>UpdateClub.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateClubsDescription.resx">
       <DependentUpon>UpdateClubsDescription.cs</DependentUpon>

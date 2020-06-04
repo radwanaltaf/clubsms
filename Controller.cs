@@ -132,9 +132,9 @@ namespace Clubs_Management_System
             return status;
         }
 
-
-        public List<String> DisplayAllClubs(ComboBox cmb)
+        public List<String> DisplayAllClubs()
         {
+            List<string> ClubsList = new List<string>();
             SqlDataAdapter da;
             DataSet ds;
             Connect();
@@ -146,14 +146,62 @@ namespace Clubs_Management_System
             DataTable clubsdt = new DataTable();
             da.Fill(clubsdt);
 
-            for (int i = 0; i < ds.Tables["Clubs"].Rows.Count; i++)
-                {
-                    AllClubs.Clubs.Add(ds.Tables["Clubs"].Rows[i].ToString());                  
-                }
+            foreach(DataRow row in clubsdt.Rows)
+            {
+                ClubsList.Add( row["Club_Name"].ToString());
+            }
 
-            return AllClubs.Clubs;
+            return ClubsList;
             
         }
 
+        public int UpdateClub(string clubname, string pname, string vpname, string secname, string clubdesc, string selectedclubname)
+        {
+            int status = 0;
+            Connect();
+
+            string updateQuerySql = "UPDATE Clubs SET Club_Name=@_clubname, President_Name=@_pname, VicePresident_Name=@_vpname, Secretary_Name=@_secname, Clubs_Description=@_clubsdesc WHERE Club_Name=@_selectedclubname";
+
+            SqlCommand cmd = new SqlCommand(updateQuerySql, conn);
+            cmd.Parameters.AddWithValue("@_clubname", clubname);
+            cmd.Parameters.AddWithValue("@_pname", pname);
+            cmd.Parameters.AddWithValue("@_vpname", vpname);
+            cmd.Parameters.AddWithValue("@_secname", secname);
+            cmd.Parameters.AddWithValue("@_clubsdesc", clubdesc);
+            cmd.Parameters.AddWithValue("@_selectedclubname", selectedclubname);
+
+            status = cmd.ExecuteNonQuery();
+
+            return status;
+        }
+
+        public int DeRegisterClub(string clubname, DateTime deregdate)
+        {
+            int status = 0;
+            Connect();
+
+            string trasnfertableQuerySql = "INSERT INTO DeactiveClubs (Club_Name, President_Name, VicePresident_Name, Secretary_Name, Clubs_Description, Register_Date) SELECT Club_Name, President_Name, VicePresident_Name, Secretary_Name, Clubs_Description, Register_Date FROM Clubs WHERE Club_Name=@_clubname";
+            SqlCommand cmd = new SqlCommand(trasnfertableQuerySql, conn);
+            cmd.Parameters.AddWithValue("@_clubname", clubname);
+            status = cmd.ExecuteNonQuery();
+
+            string addDeRegDateQuerySql = "UPDATE DeactiveClubs SET Deregister_Date=@_deregdate WHERE Club_Name=@_selectedclubname";
+            cmd.Parameters.AddWithValue("@_deregdate", deregdate);
+            cmd.Parameters.AddWithValue("@_selectedclubname", clubname);
+            cmd.CommandText = addDeRegDateQuerySql;            
+            cmd.ExecuteNonQuery();
+
+            if(status > 0)
+            {
+                string deleteDeregClub = "DELETE FROM Clubs WHERE Club_Name=@_delclubname";
+                cmd.Parameters.AddWithValue("@_delclubname", clubname);
+                cmd.CommandText = deleteDeregClub;
+                cmd.ExecuteNonQuery();
+            }
+
+
+
+            return status;
+        }
     }
 }
