@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AllClubs.cs" />
+    <Compile Include="ClubsInfo.cs" />
     <Compile Include="ClubsReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +87,12 @@
     <Compile Include="ReportActivities.Designer.cs">
       <DependentUpon>ReportActivities.cs</DependentUpon>
     </Compile>
+    <Compile Include="SearchClubs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchClubs.Designer.cs">
+      <DependentUpon>SearchClubs.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateClub.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,12 +100,6 @@
       <DependentUpon>UpdateClub.cs</DependentUpon>
     </Compile>
     <Compile Include="UserRole.cs" />
-    <Compile Include="SearchClubs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SearchClubs.Designer.cs">
-      <DependentUpon>SearchClubs.cs</DependentUpon>
-    </Compile>
     <Compile Include="Styling.cs" />
     <Compile Include="UpdateClubActivity.cs">
       <SubType>Form</SubType>

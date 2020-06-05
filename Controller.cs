@@ -136,23 +136,19 @@ namespace Clubs_Management_System
         {
             List<string> ClubsList = new List<string>();
             SqlDataAdapter da;
-            DataSet ds;
             Connect();
             string retreiveAllClubNames = "SELECT Club_Name FROM Clubs";
 
-
             da = new SqlDataAdapter(retreiveAllClubNames, conn);
-            ds = new DataSet();
-            DataTable clubsdt = new DataTable();
-            da.Fill(clubsdt);
+            DataTable clubsnamedatatable = new DataTable();
+            da.Fill(clubsnamedatatable);
 
-            foreach(DataRow row in clubsdt.Rows)
+            foreach(DataRow row in clubsnamedatatable.Rows)
             {
                 ClubsList.Add( row["Club_Name"].ToString());
             }
 
-            return ClubsList;
-            
+            return ClubsList;            
         }
 
         public int UpdateClub(string clubname, string pname, string vpname, string secname, string clubdesc, string selectedclubname)
@@ -199,9 +195,35 @@ namespace Clubs_Management_System
                 cmd.ExecuteNonQuery();
             }
 
-
-
             return status;
+        }
+
+        public void SearchClub(string clubname)
+        {
+            SqlDataReader dr;
+            //SqlDataAdapter da;
+            //DataTable allclubsinfo;
+            Connect();
+            string readAllClubInfoQuerySql = "SELECT * FROM Clubs WHERE Club_Name=@clubname";
+
+            SqlCommand cmd = new SqlCommand(readAllClubInfoQuerySql, conn);
+            cmd.Parameters.AddWithValue("@clubname", clubname);
+            dr = cmd.ExecuteReader();
+
+            while(dr.Read())
+            {
+                ClubsInfo.ClubName = dr.GetValue(1).ToString();
+                ClubsInfo.PName = dr.GetValue(2).ToString();
+                ClubsInfo.VPName = dr.GetValue(3).ToString();
+                ClubsInfo.SecName = dr.GetValue(4).ToString();
+                ClubsInfo.ClubDesc = dr.GetValue(5).ToString();
+            }
+
+            //allclubsinfo = new DataTable();
+            //da = new SqlDataAdapter(readAllClubInfoQuerySql, conn);
+            //da.Fill(allclubsinfo);
+
+            
         }
     }
 }

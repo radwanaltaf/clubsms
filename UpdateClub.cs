@@ -47,11 +47,15 @@ namespace Clubs_Management_System
 
                 if (status >= 1)
                 {
-                    MessageBox.Show("Record Updated Successfully", "Success2", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Record Updated Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cmbClub.Items.Clear();
+                    List<string> allClubs = new List<string>();
+                    allClubs = cntrl.DisplayAllClubs();
+                    cmbClub.Items.AddRange(allClubs.Cast<Object>().ToArray());
                 }
                 else
                 {
-                    MessageBox.Show("Error", "Error Caption", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Something went wrong, please try again!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
