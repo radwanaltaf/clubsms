@@ -89,7 +89,8 @@ namespace Clubs_Management_System
                 }
                 Styles.DashboardShowScreen(DBScreen.SearchChild);
             }
-    
+            MainMenuStrip.BackColor = Color.DarkTurquoise;
+            MainMenuStrip.ForeColor = Color.White;
         }
 
         private void deregisterClubToolStripMenuItem_Click(object sender, EventArgs e)

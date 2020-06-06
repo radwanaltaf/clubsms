@@ -60,6 +60,7 @@ namespace Clubs_Management_System
                     else if (dr.GetValue(5).ToString().ToLower() == "club secretary")
                     {
                         role.UserRole = "secretary";
+                        LoggedInUser.Username = dr.GetValue(3).ToString();
                     }
                     else
                     {
@@ -235,8 +236,39 @@ namespace Clubs_Management_System
                     exists = true;
                 }
             }
-
             return exists;
+        }
+
+        public int UpdateClubsDesc(string secname, string newdesc)
+        {
+            int status = 0;
+            Connect();
+            string updateClubDescQuerySql = "UPDATE Clubs SET Clubs_Description=@_newdesc WHERE Secretary_Name=@_secname";
+            SqlCommand cmd = new SqlCommand(updateClubDescQuerySql, conn);
+            cmd.Parameters.AddWithValue("@_secname", secname);
+            cmd.Parameters.AddWithValue("@_newdesc", newdesc);
+            status = cmd.ExecuteNonQuery();
+
+            return status;
+        }
+
+        public void LoggedInSecClub(string secname)
+        {
+            Connect();
+            // Using parameters in Query for security purposes. 
+            string getSecNameQuerySql = "SELECT * FROM Clubs WHERE Secretary_Name=@_secname";
+            SqlCommand cmd = new SqlCommand(getSecNameQuerySql, conn);
+
+            cmd.Parameters.AddWithValue("@_secname", secname); // Giving the Paramter a value.
+            SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {                                                            
+                    LoggedInUser.ClubName = dr.GetValue(1).ToString();                                                                                                   
+                }
+
+            dr.Close();
+            conn.Close();           
         }
     }
 }

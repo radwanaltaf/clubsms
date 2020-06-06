@@ -51,6 +51,7 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Top;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 25.875F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label7.Location = new System.Drawing.Point(0, 0);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
@@ -61,11 +62,9 @@
             // 
             // RegisterLayoutPanel
             // 
-            this.RegisterLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.RegisterLayoutPanel.ColumnCount = 2;
-            this.RegisterLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.1489F));
-            this.RegisterLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.8511F));
+            this.RegisterLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.44934F));
+            this.RegisterLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.55066F));
             this.RegisterLayoutPanel.Controls.Add(this.label1, 0, 0);
             this.RegisterLayoutPanel.Controls.Add(this.dtpickerRegister, 1, 5);
             this.RegisterLayoutPanel.Controls.Add(this.txtClubName, 1, 0);
@@ -82,23 +81,24 @@
             this.RegisterLayoutPanel.Margin = new System.Windows.Forms.Padding(4);
             this.RegisterLayoutPanel.Name = "RegisterLayoutPanel";
             this.RegisterLayoutPanel.RowCount = 6;
-            this.RegisterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.RegisterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.RegisterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 110F));
-            this.RegisterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 108F));
-            this.RegisterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 208F));
-            this.RegisterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 179F));
-            this.RegisterLayoutPanel.Size = new System.Drawing.Size(1133, 956);
+            this.RegisterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17F));
+            this.RegisterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17F));
+            this.RegisterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17F));
+            this.RegisterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17F));
+            this.RegisterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.6701F));
+            this.RegisterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.701031F));
+            this.RegisterLayoutPanel.Size = new System.Drawing.Size(1480, 970);
             this.RegisterLayoutPanel.TabIndex = 23;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Courier New", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(4, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 37);
+            this.label1.Size = new System.Drawing.Size(282, 49);
             this.label1.TabIndex = 6;
             this.label1.Text = "Club Name:";
             // 
@@ -107,7 +107,7 @@
             this.dtpickerRegister.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
             this.dtpickerRegister.CalendarTitleForeColor = System.Drawing.Color.Silver;
             this.dtpickerRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpickerRegister.Location = new System.Drawing.Point(368, 780);
+            this.dtpickerRegister.Location = new System.Drawing.Point(706, 908);
             this.dtpickerRegister.Margin = new System.Windows.Forms.Padding(4);
             this.dtpickerRegister.Name = "dtpickerRegister";
             this.dtpickerRegister.Size = new System.Drawing.Size(761, 44);
@@ -117,7 +117,7 @@
             // 
             this.txtClubName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClubName.ForeColor = System.Drawing.Color.Silver;
-            this.txtClubName.Location = new System.Drawing.Point(368, 4);
+            this.txtClubName.Location = new System.Drawing.Point(706, 4);
             this.txtClubName.Margin = new System.Windows.Forms.Padding(4);
             this.txtClubName.MaxLength = 75;
             this.txtClubName.Name = "txtClubName";
@@ -130,11 +130,12 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(4, 776);
+            this.label6.Font = new System.Drawing.Font("Courier New", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(4, 904);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(228, 37);
+            this.label6.Size = new System.Drawing.Size(412, 49);
             this.label6.TabIndex = 11;
             this.label6.Text = "Register Date: ";
             // 
@@ -142,7 +143,7 @@
             // 
             this.txtRegClubDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRegClubDesc.ForeColor = System.Drawing.Color.Silver;
-            this.txtRegClubDesc.Location = new System.Drawing.Point(368, 572);
+            this.txtRegClubDesc.Location = new System.Drawing.Point(706, 660);
             this.txtRegClubDesc.Margin = new System.Windows.Forms.Padding(4);
             this.txtRegClubDesc.MaxLength = 350;
             this.txtRegClubDesc.Multiline = true;
@@ -156,11 +157,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(4, 175);
+            this.label2.Font = new System.Drawing.Font("Courier New", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(4, 164);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(278, 37);
+            this.label2.Size = new System.Drawing.Size(464, 49);
             this.label2.TabIndex = 7;
             this.label2.Text = "President\'s Name:";
             // 
@@ -168,7 +170,7 @@
             // 
             this.txtSecName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSecName.ForeColor = System.Drawing.Color.Silver;
-            this.txtSecName.Location = new System.Drawing.Point(368, 464);
+            this.txtSecName.Location = new System.Drawing.Point(706, 496);
             this.txtSecName.Margin = new System.Windows.Forms.Padding(4);
             this.txtSecName.MaxLength = 75;
             this.txtSecName.Name = "txtSecName";
@@ -182,7 +184,7 @@
             // 
             this.txtPresName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPresName.ForeColor = System.Drawing.Color.Silver;
-            this.txtPresName.Location = new System.Drawing.Point(368, 179);
+            this.txtPresName.Location = new System.Drawing.Point(706, 168);
             this.txtPresName.Margin = new System.Windows.Forms.Padding(4);
             this.txtPresName.MaxLength = 75;
             this.txtPresName.Name = "txtPresName";
@@ -196,7 +198,7 @@
             // 
             this.txtVpName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVpName.ForeColor = System.Drawing.Color.Silver;
-            this.txtVpName.Location = new System.Drawing.Point(368, 354);
+            this.txtVpName.Location = new System.Drawing.Point(706, 332);
             this.txtVpName.Margin = new System.Windows.Forms.Padding(4);
             this.txtVpName.MaxLength = 75;
             this.txtVpName.Name = "txtVpName";
@@ -209,46 +211,51 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(4, 568);
+            this.label5.Font = new System.Drawing.Font("Courier New", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(4, 656);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(270, 37);
+            this.label5.Size = new System.Drawing.Size(490, 49);
             this.label5.TabIndex = 10;
             this.label5.Text = "Club Description: ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(4, 350);
+            this.label3.Font = new System.Drawing.Font("Courier New", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(4, 328);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(349, 37);
+            this.label3.Size = new System.Drawing.Size(594, 49);
             this.label3.TabIndex = 8;
             this.label3.Text = "Vice President\'s Name:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(4, 460);
+            this.label4.Font = new System.Drawing.Font("Courier New", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(4, 492);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(279, 37);
+            this.label4.Size = new System.Drawing.Size(464, 49);
             this.label4.TabIndex = 9;
             this.label4.Text = "Secretary\'s Name:";
             // 
             // btnRegister
             // 
-            this.btnRegister.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnRegister.BackColor = System.Drawing.Color.Teal;
             this.btnRegister.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnRegister.Font = new System.Drawing.Font("Segoe UI Historic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.FlatAppearance.BorderSize = 0;
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegister.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnRegister.Location = new System.Drawing.Point(0, 1344);
+            this.btnRegister.Location = new System.Drawing.Point(0, 1341);
             this.btnRegister.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(2470, 130);
+            this.btnRegister.Size = new System.Drawing.Size(2470, 243);
             this.btnRegister.TabIndex = 24;
             this.btnRegister.Text = "Click Here or Hit Enter To Register";
             this.btnRegister.UseVisualStyleBackColor = false;
@@ -258,7 +265,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2470, 1474);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.ClientSize = new System.Drawing.Size(2470, 1584);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.RegisterLayoutPanel);
             this.Controls.Add(this.label7);

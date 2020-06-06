@@ -36,15 +36,13 @@
             // 
             // gridClubActivities
             // 
-            this.gridClubActivities.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.gridClubActivities.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridClubActivities.Location = new System.Drawing.Point(62, 314);
+            this.gridClubActivities.Location = new System.Drawing.Point(38, 447);
             this.gridClubActivities.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridClubActivities.Name = "gridClubActivities";
             this.gridClubActivities.RowHeadersWidth = 51;
             this.gridClubActivities.RowTemplate.Height = 24;
-            this.gridClubActivities.Size = new System.Drawing.Size(1684, 706);
+            this.gridClubActivities.Size = new System.Drawing.Size(1904, 602);
             this.gridClubActivities.TabIndex = 16;
             // 
             // label3
@@ -52,22 +50,25 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 25.875F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.MaximumSize = new System.Drawing.Size(2000, 4000);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1924, 270);
+            this.label3.Size = new System.Drawing.Size(2000, 221);
             this.label3.TabIndex = 15;
             this.label3.Text = "Report on Club Activities For the Week";
             this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // btnReportActivities
             // 
-            this.btnReportActivities.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnReportActivities.BackColor = System.Drawing.Color.Teal;
             this.btnReportActivities.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnReportActivities.Font = new System.Drawing.Font("Segoe UI Historic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportActivities.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportActivities.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnReportActivities.Location = new System.Drawing.Point(0, 1028);
+            this.btnReportActivities.Location = new System.Drawing.Point(0, 1226);
+            this.btnReportActivities.MaximumSize = new System.Drawing.Size(2000, 4000);
             this.btnReportActivities.Name = "btnReportActivities";
-            this.btnReportActivities.Size = new System.Drawing.Size(1924, 177);
+            this.btnReportActivities.Size = new System.Drawing.Size(2000, 225);
             this.btnReportActivities.TabIndex = 17;
             this.btnReportActivities.Text = "Click Here or Hit Enter To Generate a Report";
             this.btnReportActivities.UseVisualStyleBackColor = false;
@@ -76,7 +77,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 1205);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.ClientSize = new System.Drawing.Size(2526, 1451);
             this.Controls.Add(this.btnReportActivities);
             this.Controls.Add(this.gridClubActivities);
             this.Controls.Add(this.label3);

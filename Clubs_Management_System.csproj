@@ -67,6 +67,7 @@
     <Compile Include="DeregisterClub.Designer.cs">
       <DependentUpon>DeregisterClub.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoggedInUser.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +170,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LogOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shutdown-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogOut1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

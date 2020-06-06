@@ -22,11 +22,25 @@ namespace Clubs_Management_System
         {
             this.WindowState = FormWindowState.Maximized;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.ControlBox = false;
         }
 
         private void UpdateClubActivity_FormClosing(object sender, FormClosingEventArgs e)
         {
             DBScreen.UpdateClubActivityChild = null;
+        }
+
+        private void btnUploadPics_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "PNG Image| *.png|JPEG| *.JPEG|JPG| *.JPG";
+            ofd.Title = "Open an image";
+            if(ofd.ShowDialog() == DialogResult.OK)
+            {
+                pbxEvent.Image = Image.FromFile(ofd.FileName);
+            }
         }
     }
 }

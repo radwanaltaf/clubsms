@@ -29,6 +29,7 @@ namespace Clubs_Management_System
             cntrl.DisplayAllClubs();
             List<string> allClubs = cntrl.DisplayAllClubs();
             cmbClubName.Items.AddRange(allClubs.Cast<Object>().ToArray());
+            this.BackColor = Color.FromArgb(62, 120, 138);
         }
 
         private void btnDeregisterClub_Click(object sender, EventArgs e)
