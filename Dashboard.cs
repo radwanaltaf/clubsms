@@ -179,6 +179,7 @@ namespace Clubs_Management_System
         {
             this.Close();
             this.Dispose();
+            Application.Exit();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

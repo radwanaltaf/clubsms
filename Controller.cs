@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -269,6 +271,43 @@ namespace Clubs_Management_System
 
             dr.Close();
             conn.Close();           
+        }
+
+        public int UpdateClubActivity(string loggedinclub, string activtyname, string achieversname, string activitydate)
+        {
+            int status = 0;
+            Connect();
+            string updateActivityQuerySql = "INSERT INTO ClubActivities VALUES(@_activityname, @_achieversname, @_activitydate, @_loggedinclubname)";
+            SqlCommand cmd = new SqlCommand(updateActivityQuerySql, conn);
+            cmd.Parameters.AddWithValue("@_loggedinclubname", loggedinclub);
+            cmd.Parameters.AddWithValue("@_activityname", activtyname);
+            cmd.Parameters.AddWithValue("@_achieversname", achieversname);
+            cmd.Parameters.AddWithValue("@_activitydate", activitydate);
+
+            status = cmd.ExecuteNonQuery();
+
+            return status;
+        }
+
+
+        public bool CheckActivityExists(string clubname, string activityname)
+        {
+            SqlDataReader dr;
+            bool ActExists = false;
+            string checkClubActExistsQuerySql = "SELECT * FROM ClubActivities WHERE Club_Name=@_clubname";
+            Connect();
+            SqlCommand cmd = new SqlCommand(checkClubActExistsQuerySql, conn);
+            cmd.Parameters.AddWithValue("@_clubname", clubname);
+            dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                if (dr.GetValue(1).ToString() == activityname)
+                {
+                    ActExists = true;
+                }
+            }
+            return ActExists;
         }
     }
 }

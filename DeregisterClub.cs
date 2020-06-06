@@ -23,6 +23,9 @@ namespace Clubs_Management_System
         {
             this.WindowState = FormWindowState.Maximized;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox= false;
+            this.ControlBox = false;
             cmbClubName.SelectedIndex = 0;
             pickerDeregisterationDate.MinDate = DateTime.Today;
             pickerDeregisterationDate.MaxDate = DateTime.Today.AddDays(14);

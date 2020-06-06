@@ -25,6 +25,7 @@ namespace Clubs_Management_System
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             cmbClubName.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbClubName.SelectedIndex = 0;
+            this.ControlBox = false;
             List<string> allClubs = cntrl.DisplayAllClubs();
             cmbClubName.Items.AddRange(allClubs.Cast<Object>().ToArray());
         }

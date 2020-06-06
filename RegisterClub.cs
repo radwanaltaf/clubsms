@@ -24,6 +24,9 @@ namespace Clubs_Management_System
         {
             this.WindowState = FormWindowState.Maximized;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.ControlBox = false;
             dtpickerRegister.MinDate = DateTime.Today;
             dtpickerRegister.MaxDate = DateTime.Today.AddDays(14);
         }

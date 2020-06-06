@@ -32,9 +32,9 @@
             this.btnUpdateClubDesc = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtDisabledClubName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtClubDesc = new System.Windows.Forms.RichTextBox();
-            this.txtDisabledClubName = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,6 +97,14 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1961, 654);
             this.tableLayoutPanel1.TabIndex = 25;
             // 
+            // txtDisabledClubName
+            // 
+            this.txtDisabledClubName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDisabledClubName.Location = new System.Drawing.Point(839, 3);
+            this.txtDisabledClubName.Name = "txtDisabledClubName";
+            this.txtDisabledClubName.Size = new System.Drawing.Size(1106, 44);
+            this.txtDisabledClubName.TabIndex = 26;
+            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Courier New", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -120,20 +128,13 @@
             this.txtClubDesc.Enter += new System.EventHandler(this.txtClubDesc_Enter);
             this.txtClubDesc.Leave += new System.EventHandler(this.txtClubDesc_Leave);
             // 
-            // txtDisabledClubName
-            // 
-            this.txtDisabledClubName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDisabledClubName.Location = new System.Drawing.Point(839, 3);
-            this.txtDisabledClubName.Name = "txtDisabledClubName";
-            this.txtDisabledClubName.Size = new System.Drawing.Size(1106, 44);
-            this.txtDisabledClubName.TabIndex = 26;
-            // 
             // UpdateClubsDescription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.ClientSize = new System.Drawing.Size(2651, 1505);
+            this.ControlBox = false;
             this.Controls.Add(this.btnUpdateClubDesc);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tableLayoutPanel1);

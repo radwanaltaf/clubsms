@@ -267,6 +267,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.ClientSize = new System.Drawing.Size(2470, 1584);
+            this.ControlBox = false;
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.RegisterLayoutPanel);
             this.Controls.Add(this.label7);
