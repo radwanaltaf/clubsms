@@ -63,17 +63,26 @@ namespace Clubs_Management_System
             }
             else
             {
-                int status = 0;
-                status = cntrl.RegisterClub(txtClubName.Text, txtPresName.Text, txtVpName.Text, txtSecName.Text, txtRegClubDesc.Text, dtpickerRegister.Value);
-
-                if (status >= 1)
+                bool clubExists = cntrl.CheckClubExists(txtClubName.Text);
+                if(clubExists == true)
                 {
-                    MessageBox.Show("Success", "Success Caption", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("This club already exists!", "Already Registered", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show("Error", "Error Caption", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    int status = 0;
+                    status = cntrl.RegisterClub(txtClubName.Text, txtPresName.Text, txtVpName.Text, txtSecName.Text, txtRegClubDesc.Text, dtpickerRegister.Value);
+
+                    if (status >= 1)
+                    {
+                        MessageBox.Show("Success", "Success Caption", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error", "Error Caption", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
+
             }
         }
 

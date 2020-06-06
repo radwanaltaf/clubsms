@@ -28,24 +28,34 @@ namespace Clubs_Management_System
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Usr.emailProp = txtEmail.Text;
-            Usr.passwordProp = txtPassword.Text;
-            Usr.roleProp = cmbSelectRole.SelectedItem.ToString();
-
-            bool retVal = Cntrl.Login(Usr);
-
-            if (retVal == true)
+            if (string.IsNullOrWhiteSpace(txtEmail.Text) || txtEmail.Text == "Enter Your Email"
+                || string.IsNullOrWhiteSpace(txtPassword.Text) || txtPassword.Text == "Enter Your Password"
+                || cmbSelectRole.SelectedItem.ToString() == "-Select")
             {
-                Dashboard D = new Dashboard();
-                D.Show();
-                D.Focus();
-                MessageBox.Show("Welcome " + User.firstNameProp, "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please Enter your email address, password & select a role", "Missing Fields", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Failed", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Usr.emailProp = txtEmail.Text;
+                Usr.passwordProp = txtPassword.Text;
+                Usr.roleProp = cmbSelectRole.SelectedItem.ToString();
 
+                bool retVal = Cntrl.Login(Usr);
+
+                if (retVal == true)
+                {                    
+                    Dashboard D = new Dashboard();
+                    D.Show();
+                    D.Focus();
+                    MessageBox.Show("Welcome " + User.firstNameProp, "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Email or Password is incorrect", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
+
         }
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)

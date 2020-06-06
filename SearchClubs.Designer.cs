@@ -82,10 +82,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lstClubInfo.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstClubInfo.FormattingEnabled = true;
+            this.lstClubInfo.HorizontalScrollbar = true;
             this.lstClubInfo.ItemHeight = 41;
             this.lstClubInfo.Location = new System.Drawing.Point(699, 333);
             this.lstClubInfo.Name = "lstClubInfo";
-            this.lstClubInfo.Size = new System.Drawing.Size(2556, 578);
+            this.lstClubInfo.Size = new System.Drawing.Size(2556, 619);
             this.lstClubInfo.TabIndex = 8;
             // 
             // tableLayoutPanel1

@@ -24,6 +24,8 @@ namespace Clubs_Management_System
             this.WindowState = FormWindowState.Maximized;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             cmbClubName.SelectedIndex = 0;
+            pickerDeregisterationDate.MinDate = DateTime.Today;
+            pickerDeregisterationDate.MaxDate = DateTime.Today.AddDays(14);
             cntrl.DisplayAllClubs();
             List<string> allClubs = cntrl.DisplayAllClubs();
             cmbClubName.Items.AddRange(allClubs.Cast<Object>().ToArray());

@@ -27,6 +27,21 @@ namespace Clubs_Management_System
             cmbClub.SelectedIndex = 0;
             List<string> allClubs = cntrl.DisplayAllClubs();
             cmbClub.Items.AddRange(allClubs.Cast<Object>().ToArray());
+
+            if (cmbClub.SelectedItem.ToString() == "-Select Club")
+            {
+                txtClubName.Text = "Enter Club's Name";
+                txtPresName.Text = "Enter President's Name";
+                txtVpName.Text = "Enter Vice President's Name";
+                txtSecName.Text = "Enter Secretary's Name";
+                txtRegClubDesc.Text = "Enter Club's Description";
+
+                txtClubName.ForeColor = Color.Silver;
+                txtPresName.ForeColor = Color.Silver;
+                txtVpName.ForeColor = Color.Silver;
+                txtSecName.ForeColor = Color.Silver;
+                txtRegClubDesc.ForeColor = Color.Silver;
+            }
         }
 
         private void btnUpdateClubAdmin_Click(object sender, EventArgs e)
@@ -160,6 +175,53 @@ namespace Clubs_Management_System
             if (cmbClub.SelectedItem.ToString() == "-Select Club")
             {
                 cmbClub.ForeColor = Color.Silver;
+            }
+        }
+
+        private void cmbClub_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            cntrl.SearchClub(cmbClub.SelectedItem.ToString());
+            txtClubName.Text = ClubsInfo.ClubName;
+            txtPresName.Text = ClubsInfo.PName;
+            txtVpName.Text = ClubsInfo.VPName;
+            txtSecName.Text = ClubsInfo.SecName;
+            txtRegClubDesc.Text = ClubsInfo.ClubDesc;
+
+            txtClubName.ForeColor = Color.Black;
+            txtPresName.ForeColor = Color.Black;
+            txtVpName.ForeColor = Color.Black;
+            txtSecName.ForeColor = Color.Black;
+            txtRegClubDesc.ForeColor = Color.Black;
+
+            if (cmbClub.SelectedIndex == 0)
+            {
+                txtClubName.Text = "Enter Club's Name";
+                txtPresName.Text = "Enter President's Name";
+                txtVpName.Text = "Enter Vice President's Name";
+                txtSecName.Text = "Enter Secretary's Name";
+                txtRegClubDesc.Text = "Enter Club's Description";
+
+                txtClubName.ForeColor = Color.Silver;
+                txtPresName.ForeColor = Color.Silver;
+                txtVpName.ForeColor = Color.Silver;
+                txtSecName.ForeColor = Color.Silver;
+                txtRegClubDesc.ForeColor = Color.Silver;
+
+                txtClubName.Enabled = false;
+                txtPresName.Enabled = false;
+                txtVpName.Enabled = false;
+                txtSecName.Enabled = false;
+                txtRegClubDesc.Enabled = false;
+            }
+            else
+            {
+
+                txtClubName.Enabled = true;
+                txtPresName.Enabled = true;
+                txtVpName.Enabled = true;
+                txtSecName.Enabled = true;
+                txtRegClubDesc.Enabled = true;
             }
         }
     }

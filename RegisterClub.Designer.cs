@@ -64,8 +64,8 @@
             this.RegisterLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.RegisterLayoutPanel.ColumnCount = 2;
-            this.RegisterLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.11513F));
-            this.RegisterLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.88486F));
+            this.RegisterLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.1489F));
+            this.RegisterLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.8511F));
             this.RegisterLayoutPanel.Controls.Add(this.label1, 0, 0);
             this.RegisterLayoutPanel.Controls.Add(this.dtpickerRegister, 1, 5);
             this.RegisterLayoutPanel.Controls.Add(this.txtClubName, 1, 0);
@@ -88,7 +88,7 @@
             this.RegisterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 108F));
             this.RegisterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 208F));
             this.RegisterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 179F));
-            this.RegisterLayoutPanel.Size = new System.Drawing.Size(1437, 956);
+            this.RegisterLayoutPanel.Size = new System.Drawing.Size(1133, 956);
             this.RegisterLayoutPanel.TabIndex = 23;
             // 
             // label1
@@ -107,21 +107,21 @@
             this.dtpickerRegister.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
             this.dtpickerRegister.CalendarTitleForeColor = System.Drawing.Color.Silver;
             this.dtpickerRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpickerRegister.Location = new System.Drawing.Point(508, 780);
+            this.dtpickerRegister.Location = new System.Drawing.Point(368, 780);
             this.dtpickerRegister.Margin = new System.Windows.Forms.Padding(4);
             this.dtpickerRegister.Name = "dtpickerRegister";
-            this.dtpickerRegister.Size = new System.Drawing.Size(763, 44);
+            this.dtpickerRegister.Size = new System.Drawing.Size(761, 44);
             this.dtpickerRegister.TabIndex = 21;
             // 
             // txtClubName
             // 
             this.txtClubName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClubName.ForeColor = System.Drawing.Color.Silver;
-            this.txtClubName.Location = new System.Drawing.Point(508, 4);
+            this.txtClubName.Location = new System.Drawing.Point(368, 4);
             this.txtClubName.Margin = new System.Windows.Forms.Padding(4);
             this.txtClubName.MaxLength = 75;
             this.txtClubName.Name = "txtClubName";
-            this.txtClubName.Size = new System.Drawing.Size(763, 44);
+            this.txtClubName.Size = new System.Drawing.Size(761, 44);
             this.txtClubName.TabIndex = 16;
             this.txtClubName.Text = "Enter Club\'s Name";
             this.txtClubName.Enter += new System.EventHandler(this.txtClubName_Enter);
@@ -142,7 +142,7 @@
             // 
             this.txtRegClubDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRegClubDesc.ForeColor = System.Drawing.Color.Silver;
-            this.txtRegClubDesc.Location = new System.Drawing.Point(508, 572);
+            this.txtRegClubDesc.Location = new System.Drawing.Point(368, 572);
             this.txtRegClubDesc.Margin = new System.Windows.Forms.Padding(4);
             this.txtRegClubDesc.MaxLength = 350;
             this.txtRegClubDesc.Multiline = true;
@@ -168,11 +168,11 @@
             // 
             this.txtSecName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSecName.ForeColor = System.Drawing.Color.Silver;
-            this.txtSecName.Location = new System.Drawing.Point(508, 464);
+            this.txtSecName.Location = new System.Drawing.Point(368, 464);
             this.txtSecName.Margin = new System.Windows.Forms.Padding(4);
             this.txtSecName.MaxLength = 75;
             this.txtSecName.Name = "txtSecName";
-            this.txtSecName.Size = new System.Drawing.Size(763, 44);
+            this.txtSecName.Size = new System.Drawing.Size(761, 44);
             this.txtSecName.TabIndex = 19;
             this.txtSecName.Text = "Enter Secretary\'s Name";
             this.txtSecName.Enter += new System.EventHandler(this.txtSecName_Enter);
@@ -182,7 +182,7 @@
             // 
             this.txtPresName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPresName.ForeColor = System.Drawing.Color.Silver;
-            this.txtPresName.Location = new System.Drawing.Point(508, 179);
+            this.txtPresName.Location = new System.Drawing.Point(368, 179);
             this.txtPresName.Margin = new System.Windows.Forms.Padding(4);
             this.txtPresName.MaxLength = 75;
             this.txtPresName.Name = "txtPresName";
@@ -196,7 +196,7 @@
             // 
             this.txtVpName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVpName.ForeColor = System.Drawing.Color.Silver;
-            this.txtVpName.Location = new System.Drawing.Point(508, 354);
+            this.txtVpName.Location = new System.Drawing.Point(368, 354);
             this.txtVpName.Margin = new System.Windows.Forms.Padding(4);
             this.txtVpName.MaxLength = 75;
             this.txtVpName.Name = "txtVpName";
@@ -263,7 +263,7 @@
             this.Controls.Add(this.RegisterLayoutPanel);
             this.Controls.Add(this.label7);
             this.Name = "RegisterClub";
-            this.Text = "RegisterClubb";
+            this.Text = "Register Club";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RegisterClub_FormClosing);
             this.Load += new System.EventHandler(this.RegisterClub_Load);
             this.RegisterLayoutPanel.ResumeLayout(false);

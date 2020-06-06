@@ -201,8 +201,6 @@ namespace Clubs_Management_System
         public void SearchClub(string clubname)
         {
             SqlDataReader dr;
-            //SqlDataAdapter da;
-            //DataTable allclubsinfo;
             Connect();
             string readAllClubInfoQuerySql = "SELECT * FROM Clubs WHERE Club_Name=@clubname";
 
@@ -217,13 +215,28 @@ namespace Clubs_Management_System
                 ClubsInfo.VPName = dr.GetValue(3).ToString();
                 ClubsInfo.SecName = dr.GetValue(4).ToString();
                 ClubsInfo.ClubDesc = dr.GetValue(5).ToString();
+            }         
+        }
+
+        public bool CheckClubExists(string clubname)
+        {
+            SqlDataReader dr;
+            bool exists = false;
+            string checkClubExistsQuerySql = "SELECT * FROM Clubs WHERE Club_Name=@clubname";
+            Connect();
+            SqlCommand cmd = new SqlCommand(checkClubExistsQuerySql, conn);
+            cmd.Parameters.AddWithValue("@clubname", clubname);
+            dr = cmd.ExecuteReader();
+
+            while(dr.Read())
+            {
+                if(dr.GetValue(1).ToString() == clubname)
+                {
+                    exists = true;
+                }
             }
 
-            //allclubsinfo = new DataTable();
-            //da = new SqlDataAdapter(readAllClubInfoQuerySql, conn);
-            //da.Fill(allclubsinfo);
-
-            
+            return exists;
         }
     }
 }

@@ -174,14 +174,18 @@ namespace Clubs_Management_System
             Styles.DashboardShowScreen(DBScreen.UpdateClubActivityChild);
         }
 
-        private void menuStripMain_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
+            this.Dispose();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login loginn = new Login();
+            loginn.Show();
+            loginn.Focus();
         }
     }
 }

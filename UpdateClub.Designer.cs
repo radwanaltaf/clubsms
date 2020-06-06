@@ -233,6 +233,7 @@
             this.cmbClub.Name = "cmbClub";
             this.cmbClub.Size = new System.Drawing.Size(710, 45);
             this.cmbClub.TabIndex = 37;
+            this.cmbClub.SelectedIndexChanged += new System.EventHandler(this.cmbClub_SelectedIndexChanged);
             this.cmbClub.Enter += new System.EventHandler(this.cmbClub_Enter);
             this.cmbClub.Leave += new System.EventHandler(this.cmbClub_Leave);
             // 

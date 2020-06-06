@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.menuStripMain = new System.Windows.Forms.MenuStrip();
             this.searchClubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerClubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateClubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,10 +41,12 @@
             this.activitiesReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateClubsActivitiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateClubsDescriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStripMain = new System.Windows.Forms.MenuStrip();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStripMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -55,12 +57,14 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.DodgerBlue;
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.menuStripMain, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -69,17 +73,26 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(2504, 83);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
-            // pictureBox1
+            // menuStripMain
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(2470, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 77);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.menuStripMain.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStripMain.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStripMain.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.searchClubToolStripMenuItem,
+            this.registerClubToolStripMenuItem,
+            this.updateClubToolStripMenuItem,
+            this.deregisterClubToolStripMenuItem,
+            this.clubReportToolStripMenuItem,
+            this.activitiesReportToolStripMenuItem,
+            this.updateClubsActivitiesToolStripMenuItem,
+            this.updateClubsDescriptionToolStripMenuItem});
+            this.menuStripMain.Location = new System.Drawing.Point(156, 0);
+            this.menuStripMain.Name = "menuStripMain";
+            this.menuStripMain.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.menuStripMain.Size = new System.Drawing.Size(2191, 53);
+            this.menuStripMain.TabIndex = 1;
+            this.menuStripMain.Text = "menuStrip1";
             // 
             // searchClubToolStripMenuItem
             // 
@@ -137,25 +150,29 @@
             this.updateClubsDescriptionToolStripMenuItem.Text = "Update Club\'s Description";
             this.updateClubsDescriptionToolStripMenuItem.Click += new System.EventHandler(this.updateClubsDescriptionToolStripMenuItem_Click);
             // 
-            // menuStripMain
+            // pictureBox1
             // 
-            this.menuStripMain.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStripMain.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStripMain.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.searchClubToolStripMenuItem,
-            this.registerClubToolStripMenuItem,
-            this.updateClubToolStripMenuItem,
-            this.deregisterClubToolStripMenuItem,
-            this.clubReportToolStripMenuItem,
-            this.activitiesReportToolStripMenuItem,
-            this.updateClubsActivitiesToolStripMenuItem,
-            this.updateClubsDescriptionToolStripMenuItem});
-            this.menuStripMain.Location = new System.Drawing.Point(36, 0);
-            this.menuStripMain.Name = "menuStripMain";
-            this.menuStripMain.Size = new System.Drawing.Size(2431, 53);
-            this.menuStripMain.TabIndex = 1;
-            this.menuStripMain.Text = "menuStrip1";
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(2350, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(151, 77);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = global::Clubs_Management_System.Properties.Resources.LogOut;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(150, 77);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Dashboard
             // 
@@ -172,9 +189,10 @@
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStripMain.ResumeLayout(false);
             this.menuStripMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -193,6 +211,7 @@
         private System.Windows.Forms.ToolStripMenuItem activitiesReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateClubsActivitiesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateClubsDescriptionToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
