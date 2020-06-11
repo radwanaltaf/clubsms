@@ -95,62 +95,63 @@
             // searchClubToolStripMenuItem
             // 
             this.searchClubToolStripMenuItem.Name = "searchClubToolStripMenuItem";
-            this.searchClubToolStripMenuItem.Size = new System.Drawing.Size(241, 54);
+            this.searchClubToolStripMenuItem.Size = new System.Drawing.Size(241, 120);
             this.searchClubToolStripMenuItem.Text = "Search Club";
             this.searchClubToolStripMenuItem.Click += new System.EventHandler(this.searchClubToolStripMenuItem_Click);
             // 
             // registerClubToolStripMenuItem
             // 
             this.registerClubToolStripMenuItem.Name = "registerClubToolStripMenuItem";
-            this.registerClubToolStripMenuItem.Size = new System.Drawing.Size(267, 54);
+            this.registerClubToolStripMenuItem.Size = new System.Drawing.Size(267, 120);
             this.registerClubToolStripMenuItem.Text = "Register Club";
             this.registerClubToolStripMenuItem.Click += new System.EventHandler(this.registerClubToolStripMenuItem_Click);
             // 
             // updateClubToolStripMenuItem
             // 
             this.updateClubToolStripMenuItem.Name = "updateClubToolStripMenuItem";
-            this.updateClubToolStripMenuItem.Size = new System.Drawing.Size(251, 54);
+            this.updateClubToolStripMenuItem.Size = new System.Drawing.Size(251, 120);
             this.updateClubToolStripMenuItem.Text = "Update Club";
             this.updateClubToolStripMenuItem.Click += new System.EventHandler(this.updateClubToolStripMenuItem_Click);
             // 
             // deregisterClubToolStripMenuItem
             // 
             this.deregisterClubToolStripMenuItem.Name = "deregisterClubToolStripMenuItem";
-            this.deregisterClubToolStripMenuItem.Size = new System.Drawing.Size(305, 54);
+            this.deregisterClubToolStripMenuItem.Size = new System.Drawing.Size(305, 120);
             this.deregisterClubToolStripMenuItem.Text = "Deregister Club";
             this.deregisterClubToolStripMenuItem.Click += new System.EventHandler(this.deregisterClubToolStripMenuItem_Click);
             // 
             // clubReportToolStripMenuItem
             // 
             this.clubReportToolStripMenuItem.Name = "clubReportToolStripMenuItem";
-            this.clubReportToolStripMenuItem.Size = new System.Drawing.Size(243, 54);
+            this.clubReportToolStripMenuItem.Size = new System.Drawing.Size(243, 120);
             this.clubReportToolStripMenuItem.Text = "Club Report";
             this.clubReportToolStripMenuItem.Click += new System.EventHandler(this.clubReportToolStripMenuItem_Click);
             // 
             // activitiesReportToolStripMenuItem
             // 
             this.activitiesReportToolStripMenuItem.Name = "activitiesReportToolStripMenuItem";
-            this.activitiesReportToolStripMenuItem.Size = new System.Drawing.Size(319, 54);
+            this.activitiesReportToolStripMenuItem.Size = new System.Drawing.Size(319, 120);
             this.activitiesReportToolStripMenuItem.Text = "Activities Report";
             this.activitiesReportToolStripMenuItem.Click += new System.EventHandler(this.activitiesReportToolStripMenuItem_Click);
             // 
             // updateClubsActivitiesToolStripMenuItem
             // 
             this.updateClubsActivitiesToolStripMenuItem.Name = "updateClubsActivitiesToolStripMenuItem";
-            this.updateClubsActivitiesToolStripMenuItem.Size = new System.Drawing.Size(440, 54);
+            this.updateClubsActivitiesToolStripMenuItem.Size = new System.Drawing.Size(440, 120);
             this.updateClubsActivitiesToolStripMenuItem.Text = "Update Club\'s Activities";
             this.updateClubsActivitiesToolStripMenuItem.Click += new System.EventHandler(this.updateClubsActivitiesToolStripMenuItem_Click);
             // 
             // updateClubsDescriptionToolStripMenuItem
             // 
             this.updateClubsDescriptionToolStripMenuItem.Name = "updateClubsDescriptionToolStripMenuItem";
-            this.updateClubsDescriptionToolStripMenuItem.Size = new System.Drawing.Size(480, 54);
+            this.updateClubsDescriptionToolStripMenuItem.Size = new System.Drawing.Size(480, 120);
             this.updateClubsDescriptionToolStripMenuItem.Text = "Update Club\'s Description";
             this.updateClubsDescriptionToolStripMenuItem.Click += new System.EventHandler(this.updateClubsDescriptionToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = global::Clubs_Management_System.Properties.Resources.icons8_shutdown_64;
             this.pictureBox1.Location = new System.Drawing.Point(2694, 3);
             this.pictureBox1.Name = "pictureBox1";
@@ -162,6 +163,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = global::Clubs_Management_System.Properties.Resources.LogOut1;
             this.pictureBox2.Location = new System.Drawing.Point(3, 3);
@@ -176,7 +178,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2832, 777);
+            this.ClientSize = new System.Drawing.Size(2832, 779);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;

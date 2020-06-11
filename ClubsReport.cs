@@ -18,13 +18,16 @@ namespace Clubs_Management_System
             InitializeComponent();
         }
 
-        private void ClubsReport_Load(object sender, EventArgs e)
+        private void ReportClubsss_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dsClubs.Clubs' table. You can move, or remove it, as needed.
+            this.ClubsTableAdapter.Fill(this.dsClubs.Clubs);
             this.WindowState = FormWindowState.Maximized;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.reportViewer1.RefreshReport();
         }
 
-        private void ClubsReport_FormClosing(object sender, FormClosingEventArgs e)
+        private void ReportClubsss_FormClosing(object sender, FormClosingEventArgs e)
         {
             DBScreen.ClubsReportChild = null;
         }

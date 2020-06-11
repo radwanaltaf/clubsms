@@ -33,6 +33,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,12 +65,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClubsInfo.cs" />
-    <Compile Include="ClubsReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ClubsReport.Designer.cs">
-      <DependentUpon>ClubsReport.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controller.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
@@ -61,11 +73,22 @@
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="DashboardScreens.cs" />
+    <Compile Include="DSClubs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSClubs.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DeregisterClub.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DeregisterClub.Designer.cs">
       <DependentUpon>DeregisterClub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportActivities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportActivities.Designer.cs">
+      <DependentUpon>ReportActivities.cs</DependentUpon>
     </Compile>
     <Compile Include="LoggedInUser.cs" />
     <Compile Include="Login.cs">
@@ -82,11 +105,11 @@
     <Compile Include="RegisterClub.Designer.cs">
       <DependentUpon>RegisterClub.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReportActivities.cs">
+    <Compile Include="ClubsReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReportActivities.Designer.cs">
-      <DependentUpon>ReportActivities.cs</DependentUpon>
+    <Compile Include="ClubsReport.Designer.cs">
+      <DependentUpon>ClubsReport.cs</DependentUpon>
     </Compile>
     <Compile Include="SearchClubs.cs">
       <SubType>Form</SubType>
@@ -94,6 +117,7 @@
     <Compile Include="SearchClubs.Designer.cs">
       <DependentUpon>SearchClubs.cs</DependentUpon>
     </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="UpdateClub.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,14 +139,16 @@
       <DependentUpon>UpdateClubsDescription.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
-    <EmbeddedResource Include="ClubsReport.resx">
-      <DependentUpon>ClubsReport.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="ClubsActivitiesReport.rdlc" />
+    <EmbeddedResource Include="ClubsRepoort.rdlc" />
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeregisterClub.resx">
       <DependentUpon>DeregisterClub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportActivities.resx">
+      <DependentUpon>ReportActivities.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -140,8 +166,8 @@
     <EmbeddedResource Include="RegisterClub.resx">
       <DependentUpon>RegisterClub.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportActivities.resx">
-      <DependentUpon>ReportActivities.cs</DependentUpon>
+    <EmbeddedResource Include="ClubsReport.resx">
+      <DependentUpon>ClubsReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SearchClubs.resx">
       <DependentUpon>SearchClubs.cs</DependentUpon>
@@ -155,6 +181,18 @@
     <EmbeddedResource Include="UpdateClubsDescription.resx">
       <DependentUpon>UpdateClubsDescription.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DSClubs.xsc">
+      <DependentUpon>DSClubs.xsd</DependentUpon>
+    </None>
+    <None Include="DSClubs.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSClubs.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSClubs.xss">
+      <DependentUpon>DSClubs.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -176,6 +214,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LogOut1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -28,63 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.ClubsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsClubs = new Clubs_Management_System.dsClubs();
             this.label3 = new System.Windows.Forms.Label();
-            this.gridClubs = new System.Windows.Forms.DataGridView();
-            this.btnReportClubs = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.gridClubs)).BeginInit();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.ClubsTableAdapter = new Clubs_Management_System.dsClubsTableAdapters.ClubsTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.ClubsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsClubs)).BeginInit();
             this.SuspendLayout();
+            // 
+            // ClubsBindingSource
+            // 
+            this.ClubsBindingSource.DataMember = "Clubs";
+            this.ClubsBindingSource.DataSource = this.dsClubs;
+            // 
+            // dsClubs
+            // 
+            this.dsClubs.DataSetName = "dsClubs";
+            this.dsClubs.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label3
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 25.875F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1924, 241);
-            this.label3.TabIndex = 13;
+            this.label3.Size = new System.Drawing.Size(2676, 261);
+            this.label3.TabIndex = 14;
             this.label3.Text = "Report on Clubs";
             this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // gridClubs
+            // reportViewer1
             // 
-            this.gridClubs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridClubs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridClubs.Location = new System.Drawing.Point(64, 397);
-            this.gridClubs.Margin = new System.Windows.Forms.Padding(8, 5, 8, 5);
-            this.gridClubs.Name = "gridClubs";
-            this.gridClubs.RowHeadersWidth = 51;
-            this.gridClubs.RowTemplate.Height = 24;
-            this.gridClubs.Size = new System.Drawing.Size(1714, 583);
-            this.gridClubs.TabIndex = 14;
+            reportDataSource4.Name = "DataSet1";
+            reportDataSource4.Value = this.ClubsBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Clubs_Management_System.ClubsRepoort.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(599, 415);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(1700, 853);
+            this.reportViewer1.TabIndex = 20;
             // 
-            // btnReportClubs
+            // ClubsTableAdapter
             // 
-            this.btnReportClubs.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnReportClubs.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnReportClubs.Font = new System.Drawing.Font("Segoe UI Historic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportClubs.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnReportClubs.Location = new System.Drawing.Point(0, 1026);
-            this.btnReportClubs.Name = "btnReportClubs";
-            this.btnReportClubs.Size = new System.Drawing.Size(1924, 177);
-            this.btnReportClubs.TabIndex = 18;
-            this.btnReportClubs.Text = "Click Here or Hit Enter To Generate a Report";
-            this.btnReportClubs.UseVisualStyleBackColor = false;
+            this.ClubsTableAdapter.ClearBeforeFill = true;
             // 
             // ClubsReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 1203);
-            this.Controls.Add(this.btnReportClubs);
-            this.Controls.Add(this.gridClubs);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.ClientSize = new System.Drawing.Size(2676, 1547);
+            this.ControlBox = false;
+            this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.label3);
             this.Name = "ClubsReport";
             this.Text = "Report";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClubsReport_FormClosing);
-            this.Load += new System.EventHandler(this.ClubsReport_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gridClubs)).EndInit();
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ReportClubsss_FormClosing);
+            this.Load += new System.EventHandler(this.ReportClubsss_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ClubsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsClubs)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -92,7 +100,9 @@
         #endregion
 
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView gridClubs;
-        private System.Windows.Forms.Button btnReportClubs;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource ClubsBindingSource;
+        private dsClubs dsClubs;
+        private dsClubsTableAdapters.ClubsTableAdapter ClubsTableAdapter;
     }
 }
