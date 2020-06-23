@@ -13,6 +13,7 @@ namespace Clubs_Management_System
 {
     public partial class Dashboard : Form
     {
+        ControlMenuBar MenuHideDisplay = new ControlMenuBar();
         Controller Cntrl = new Controller();
         private Styling Styles = new Styling();
         private readonly DashboardScreens DBScreen = new DashboardScreens();
@@ -34,7 +35,7 @@ namespace Clubs_Management_System
 
             if(role.UserRole == "admin")
             {
-                Cntrl.DisplayMenuAdmin(updateClubDescItem: updateClubsDescriptionToolStripMenuItem,
+                MenuHideDisplay.DisplayMenuAdmin(updateClubDescItem: updateClubsDescriptionToolStripMenuItem,
                     updateClubActivity: updateClubsActivitiesToolStripMenuItem, 
                     searchItem: searchClubToolStripMenuItem,
                     registerItem: registerClubToolStripMenuItem,
@@ -53,7 +54,7 @@ namespace Clubs_Management_System
             }
             else if(role.UserRole == "secretary")
             {
-                Cntrl.DisplayMenuSecretary(updateClubDescItem: updateClubsDescriptionToolStripMenuItem, 
+                MenuHideDisplay.DisplayMenuSecretary(updateClubDescItem: updateClubsDescriptionToolStripMenuItem, 
                     updateClubActivity: updateClubsActivitiesToolStripMenuItem,
                     searchItem: searchClubToolStripMenuItem,
                     registerItem: registerClubToolStripMenuItem,
@@ -72,7 +73,7 @@ namespace Clubs_Management_System
             }
             else
             {
-                Cntrl.DisplayMenuStudent(updateClubDescItem: updateClubsDescriptionToolStripMenuItem,
+                MenuHideDisplay.DisplayMenuStudent(updateClubDescItem: updateClubsDescriptionToolStripMenuItem,
                     updateClubActivity: updateClubsActivitiesToolStripMenuItem,
                     searchItem: searchClubToolStripMenuItem,
                     registerItem: registerClubToolStripMenuItem,

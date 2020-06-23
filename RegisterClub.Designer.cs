@@ -43,7 +43,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cmbDeactiveclubs = new System.Windows.Forms.ComboBox();
             this.RegisterLayoutPanel.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label7
@@ -55,7 +59,7 @@
             this.label7.Location = new System.Drawing.Point(0, 0);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(2470, 229);
+            this.label7.Size = new System.Drawing.Size(2653, 229);
             this.label7.TabIndex = 15;
             this.label7.Text = "Register a New Club";
             this.label7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -77,7 +81,7 @@
             this.RegisterLayoutPanel.Controls.Add(this.label5, 0, 4);
             this.RegisterLayoutPanel.Controls.Add(this.label3, 0, 2);
             this.RegisterLayoutPanel.Controls.Add(this.label4, 0, 3);
-            this.RegisterLayoutPanel.Location = new System.Drawing.Point(526, 330);
+            this.RegisterLayoutPanel.Location = new System.Drawing.Point(222, 330);
             this.RegisterLayoutPanel.Margin = new System.Windows.Forms.Padding(4);
             this.RegisterLayoutPanel.Name = "RegisterLayoutPanel";
             this.RegisterLayoutPanel.RowCount = 6;
@@ -255,28 +259,69 @@
             this.btnRegister.Location = new System.Drawing.Point(0, 1341);
             this.btnRegister.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(2470, 243);
+            this.btnRegister.Size = new System.Drawing.Size(2653, 243);
             this.btnRegister.TabIndex = 24;
             this.btnRegister.Text = "Click Here or Hit Enter To Register";
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.61665F));
+            this.tableLayoutPanel1.Controls.Add(this.cmbDeactiveclubs, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label8, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(1788, 330);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.91626F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 61.08374F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(750, 414);
+            this.tableLayoutPanel1.TabIndex = 22;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Courier New", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8.Location = new System.Drawing.Point(4, 0);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(490, 49);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Deactivated Clubs:";
+            // 
+            // cmbDeactiveclubs
+            // 
+            this.cmbDeactiveclubs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDeactiveclubs.ForeColor = System.Drawing.Color.Black;
+            this.cmbDeactiveclubs.FormattingEnabled = true;
+            this.cmbDeactiveclubs.Items.AddRange(new object[] {
+            "-Register a Deactivated Club"});
+            this.cmbDeactiveclubs.Location = new System.Drawing.Point(3, 164);
+            this.cmbDeactiveclubs.Name = "cmbDeactiveclubs";
+            this.cmbDeactiveclubs.Size = new System.Drawing.Size(744, 45);
+            this.cmbDeactiveclubs.TabIndex = 38;
             // 
             // RegisterClub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.ClientSize = new System.Drawing.Size(2470, 1584);
+            this.ClientSize = new System.Drawing.Size(2653, 1584);
             this.ControlBox = false;
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.RegisterLayoutPanel);
             this.Controls.Add(this.label7);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "RegisterClub";
             this.Text = "Register Club";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RegisterClub_FormClosing);
             this.Load += new System.EventHandler(this.RegisterClub_Load);
             this.RegisterLayoutPanel.ResumeLayout(false);
             this.RegisterLayoutPanel.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -298,5 +343,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cmbDeactiveclubs;
     }
 }

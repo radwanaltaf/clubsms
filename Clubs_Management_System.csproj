@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="ClubsInfo.cs" />
     <Compile Include="Controller.cs" />
+    <Compile Include="ControlMenuBar.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>

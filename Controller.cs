@@ -15,7 +15,6 @@ namespace Clubs_Management_System
 {
     class Controller
     {
-
         SqlConnection conn;
         User usr = new User();
 
@@ -78,45 +77,6 @@ namespace Clubs_Management_System
             return Succes;
         }
 
-        //A method which will Hide & Show the menu items for the Admin
-        public void DisplayMenuAdmin(ToolStripMenuItem searchItem, ToolStripMenuItem registerItem, ToolStripMenuItem deregisterItem, ToolStripMenuItem updateClubItem, ToolStripMenuItem clubReportItem, ToolStripMenuItem activityReportItem, ToolStripMenuItem updateClubDescItem, ToolStripMenuItem updateClubActivity)
-        {
-                updateClubDescItem.Visible = false;
-                updateClubActivity.Visible = false;
-                searchItem.Visible = true;
-                registerItem.Visible = true;
-                deregisterItem.Visible = true;
-                updateClubItem.Visible = true;
-                clubReportItem.Visible = true;
-                activityReportItem.Visible = true;
-        }
-
-        //A method which will Hide & Show the menu items for the Secretary
-        public void DisplayMenuSecretary(ToolStripMenuItem searchItem, ToolStripMenuItem registerItem, ToolStripMenuItem deregisterItem, ToolStripMenuItem updateClubItem, ToolStripMenuItem clubReportItem, ToolStripMenuItem activityReportItem, ToolStripMenuItem updateClubDescItem, ToolStripMenuItem updateClubActivity)
-        {
-            updateClubDescItem.Visible = true;
-            updateClubActivity.Visible = true;
-            searchItem.Visible = false;
-            registerItem.Visible = false;
-            deregisterItem.Visible = false;
-            updateClubItem.Visible = false;
-            clubReportItem.Visible = false;
-            activityReportItem.Visible = false;
-        }
-
-        //A method which will Hide & Show the menu items for the student
-        public void DisplayMenuStudent(ToolStripMenuItem searchItem, ToolStripMenuItem registerItem, ToolStripMenuItem deregisterItem, ToolStripMenuItem updateClubItem, ToolStripMenuItem clubReportItem, ToolStripMenuItem activityReportItem, ToolStripMenuItem updateClubDescItem, ToolStripMenuItem updateClubActivity)
-        {
-            updateClubDescItem.Visible = false;
-            updateClubActivity.Visible = false;
-            searchItem.Visible = true;
-            registerItem.Visible = false;
-            deregisterItem.Visible = false;
-            updateClubItem.Visible = false;
-            clubReportItem.Visible = false;
-            activityReportItem.Visible = false;
-        }
-
         public int RegisterClub(string clubsname, string presidentsname, string vicepresidentsname, string secretarysname, string description, DateTime registerdate)
         {
             int status = 0;
@@ -152,6 +112,25 @@ namespace Clubs_Management_System
             }
 
             return ClubsList;            
+        }
+
+        public List<string> DisplayDeactiveClubs()
+        {
+            List<string> DeActiveClubsList = new List<string>();
+            SqlDataAdapter da;
+            Connect();
+            string retrieveDeregclubnamesSqlQuery = "SELECT Club_Name FROM DeactiveClubs";
+
+            da = new SqlDataAdapter(retrieveDeregclubnamesSqlQuery, conn);
+            DataTable deactivedatatable = new DataTable();
+            da.Fill(deactivedatatable);
+
+            foreach (DataRow row in deactivedatatable.Rows)
+            {
+                DeActiveClubsList.Add(row["Club_Name"].ToString());
+            }
+
+            return DeActiveClubsList;
         }
 
         public int UpdateClub(string clubname, string pname, string vpname, string secname, string clubdesc, string selectedclubname)
@@ -308,6 +287,26 @@ namespace Clubs_Management_System
                 }
             }
             return ActExists;
+        }
+
+        public int ActivateDeregClub(string clubname)
+        {
+            int status = 0;
+            Connect();
+
+            string trasnferDeActivtableQuerySql = "INSERT INTO Clubs (Club_Name, President_Name, VicePresident_Name, Secretary_Name, Clubs_Description, Register_Date) SELECT Club_Name, President_Name, VicePresident_Name, Secretary_Name, Clubs_Description, Register_Date FROM DeactiveClubs WHERE Club_Name=@_clubnamee";
+            SqlCommand cmd = new SqlCommand(trasnferDeActivtableQuerySql, conn);
+            cmd.Parameters.AddWithValue("@_clubnamee", clubname);
+            status = cmd.ExecuteNonQuery();
+
+            if (status > 0)
+            {
+                string deleteDeregClub = "DELETE FROM DeactiveClubs WHERE Club_Name=@_delclubnamee";
+                cmd.Parameters.AddWithValue("@_delclubnamee", clubname);
+                cmd.CommandText = deleteDeregClub;
+                cmd.ExecuteNonQuery();
+            }
+            return status;
         }
     }
 }

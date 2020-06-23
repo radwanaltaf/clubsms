@@ -27,8 +27,12 @@ namespace Clubs_Management_System
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.ControlBox = false;
+            cmbDeactiveclubs.SelectedIndex = 0;
             dtpickerRegister.MinDate = DateTime.Today;
             dtpickerRegister.MaxDate = DateTime.Today.AddDays(14);
+            cntrl.DisplayDeactiveClubs();
+            List<string> allDeactiveClubs = cntrl.DisplayDeactiveClubs();
+            cmbDeactiveclubs.Items.AddRange(allDeactiveClubs.Cast<Object>().ToArray());
         }
 
         private void RegisterClub_FormClosing(object sender, FormClosingEventArgs e)
@@ -56,37 +60,53 @@ namespace Clubs_Management_System
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtClubName.Text) || txtClubName.Text == "Enter Club's Name" 
-                || string.IsNullOrWhiteSpace(txtPresName.Text) || txtPresName.Text == "Enter President's Name"
-                || string.IsNullOrWhiteSpace(txtVpName.Text) || txtVpName.Text == "Enter Vice President's Name"
-                || string.IsNullOrWhiteSpace(txtSecName.Text) || txtSecName.Text == "Enter Secretary's Name"
-                || string.IsNullOrWhiteSpace(txtRegClubDesc.Text) || txtRegClubDesc.Text == "Enter Club's Description")
+            if (cmbDeactiveclubs.SelectedIndex != 0)
             {
-                MessageBox.Show("Please fill all the fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                bool clubExists = cntrl.CheckClubExists(txtClubName.Text);
-                if(clubExists == true)
+                int statusDeactive = 0;
+                statusDeactive = cntrl.ActivateDeregClub(cmbDeactiveclubs.SelectedItem.ToString());
+                if (statusDeactive >= 1)
                 {
-                    MessageBox.Show("This club already exists!", "Already Registered", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Success", "Success Caption", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    int status = 0;
-                    status = cntrl.RegisterClub(txtClubName.Text, txtPresName.Text, txtVpName.Text, txtSecName.Text, txtRegClubDesc.Text, dtpickerRegister.Value);
-
-                    if (status >= 1)
+                    MessageBox.Show("Error", "Error Caption", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                if (string.IsNullOrWhiteSpace(txtClubName.Text) || txtClubName.Text == "Enter Club's Name" 
+                    || string.IsNullOrWhiteSpace(txtPresName.Text) || txtPresName.Text == "Enter President's Name"
+                    || string.IsNullOrWhiteSpace(txtVpName.Text) || txtVpName.Text == "Enter Vice President's Name"
+                    || string.IsNullOrWhiteSpace(txtSecName.Text) || txtSecName.Text == "Enter Secretary's Name"
+                    || string.IsNullOrWhiteSpace(txtRegClubDesc.Text) || txtRegClubDesc.Text == "Enter Club's Description")
+                {
+                    MessageBox.Show("Please fill all the fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    bool clubExists = cntrl.CheckClubExists(txtClubName.Text);
+                    if(clubExists == true)
                     {
-                        MessageBox.Show("Success", "Success Caption", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("This club already exists!", "Already Registered", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
-                    {
-                        MessageBox.Show("Error", "Error Caption", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    {                                       
+                        int status = 0;
+                        status = cntrl.RegisterClub(txtClubName.Text, txtPresName.Text, txtVpName.Text, txtSecName.Text, txtRegClubDesc.Text, dtpickerRegister.Value);
+
+                        if (status >= 1)
+                        {
+                            MessageBox.Show("Success", "Success Caption", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error", "Error Caption", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }                    
                     }
                 }
-
             }
+            
         }
 
         private void txtPresName_Enter(object sender, EventArgs e)

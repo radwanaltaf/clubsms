@@ -15,13 +15,9 @@ namespace Clubs_Management_System
         private string _role;
 
         public string emailProp { get => _emailID; set => _emailID = value; }
-
         public string passwordProp { get => _pswd; set => _pswd = value; }
-
         public static string firstNameProp { get => _firstName; set => _firstName = value; }
-
         public static string lastNameProp { get => _lastname; set => _lastname = value; }
-
         public string roleProp { get => _role; set => _role = value; }
 
     }

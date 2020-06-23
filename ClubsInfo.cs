@@ -13,6 +13,7 @@ namespace Clubs_Management_System
         private static string _vpname;
         private static string _secname;
         private static string _clubdesc;
+
         public static string ClubName { get => _clubname; set => _clubname = value; }
         public static string PName { get => _pname; set => _pname = value; }
         public static string VPName { get => _vpname; set => _vpname = value; }
