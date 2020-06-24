@@ -47,7 +47,7 @@ namespace Clubs_Management_System
                     Dashboard D = new Dashboard();
                     D.Show();
                     D.Focus();
-                    MessageBox.Show("Welcome " + User.firstNameProp, "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Welcome " + User.firstNameProp, "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
                 }
                 else

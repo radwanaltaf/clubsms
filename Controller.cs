@@ -252,16 +252,17 @@ namespace Clubs_Management_System
             conn.Close();           
         }
 
-        public int UpdateClubActivity(string loggedinclub, string activtyname, string achieversname, string activitydate)
+        public int UpdateClubActivity(string loggedinclub, string activtyname, string achieversname, string activitydate, string desc)
         {
             int status = 0;
             Connect();
-            string updateActivityQuerySql = "INSERT INTO ClubActivities VALUES(@_activityname, @_achieversname, @_activitydate, @_loggedinclubname)";
+            string updateActivityQuerySql = "INSERT INTO ClubActivities VALUES(@_activityname, @_achieversname, @_activitydate, @_loggedinclubname, @_activDesc)";
             SqlCommand cmd = new SqlCommand(updateActivityQuerySql, conn);
             cmd.Parameters.AddWithValue("@_loggedinclubname", loggedinclub);
             cmd.Parameters.AddWithValue("@_activityname", activtyname);
             cmd.Parameters.AddWithValue("@_achieversname", achieversname);
             cmd.Parameters.AddWithValue("@_activitydate", activitydate);
+            cmd.Parameters.AddWithValue("@_activDesc", desc);
 
             status = cmd.ExecuteNonQuery();
 

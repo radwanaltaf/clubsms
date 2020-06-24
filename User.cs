@@ -19,6 +19,5 @@ namespace Clubs_Management_System
         public static string firstNameProp { get => _firstName; set => _firstName = value; }
         public static string lastNameProp { get => _lastname; set => _lastname = value; }
         public string roleProp { get => _role; set => _role = value; }
-
     }
 }

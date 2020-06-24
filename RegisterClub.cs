@@ -27,12 +27,8 @@ namespace Clubs_Management_System
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.ControlBox = false;
-            cmbDeactiveclubs.SelectedIndex = 0;
             dtpickerRegister.MinDate = DateTime.Today;
             dtpickerRegister.MaxDate = DateTime.Today.AddDays(14);
-            cntrl.DisplayDeactiveClubs();
-            List<string> allDeactiveClubs = cntrl.DisplayDeactiveClubs();
-            cmbDeactiveclubs.Items.AddRange(allDeactiveClubs.Cast<Object>().ToArray());
         }
 
         private void RegisterClub_FormClosing(object sender, FormClosingEventArgs e)
@@ -60,21 +56,6 @@ namespace Clubs_Management_System
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if (cmbDeactiveclubs.SelectedIndex != 0)
-            {
-                int statusDeactive = 0;
-                statusDeactive = cntrl.ActivateDeregClub(cmbDeactiveclubs.SelectedItem.ToString());
-                if (statusDeactive >= 1)
-                {
-                    MessageBox.Show("Success", "Success Caption", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Error", "Error Caption", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
                 if (string.IsNullOrWhiteSpace(txtClubName.Text) || txtClubName.Text == "Enter Club's Name" 
                     || string.IsNullOrWhiteSpace(txtPresName.Text) || txtPresName.Text == "Enter President's Name"
                     || string.IsNullOrWhiteSpace(txtVpName.Text) || txtVpName.Text == "Enter Vice President's Name"
@@ -97,16 +78,14 @@ namespace Clubs_Management_System
 
                         if (status >= 1)
                         {
-                            MessageBox.Show("Success", "Success Caption", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Registered Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
-                            MessageBox.Show("Error", "Error Caption", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Something went wrong, try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }                    
                     }
-                }
-            }
-            
+                }               
         }
 
         private void txtPresName_Enter(object sender, EventArgs e)

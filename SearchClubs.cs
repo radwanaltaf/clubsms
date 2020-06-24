@@ -26,32 +26,11 @@ namespace Clubs_Management_System
             cmbClubName.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbClubName.SelectedIndex = 0;
             this.ControlBox = false;
-            List<string> allClubs = cntrl.DisplayAllClubs();
-            cmbClubName.Items.AddRange(allClubs.Cast<Object>().ToArray());
         }
 
         private void SearchClub_FormClosing(object sender, FormClosingEventArgs e)
         {
             DBScreen.SearchChild = null;
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            //if(cmbClubName.SelectedItem.ToString() == "-Select Club")
-            //{
-            //    MessageBox.Show("Please Chose a Club", "No Club Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-            //else
-            //{
-            //    lstClubInfo.Items.Clear();
-            //    cntrl.SearchClub(cmbClubName.SelectedItem.ToString());
-            //    lstClubInfo.Items.Add("Club's Name: \t\t" + ClubsInfo.ClubName);
-            //    lstClubInfo.Items.Add("President's Name: \t\t" + ClubsInfo.PName);
-            //    lstClubInfo.Items.Add("Vice President's Name: \t" + ClubsInfo.VPName);
-            //    lstClubInfo.Items.Add("Secretary's Name: \t\t" + ClubsInfo.SecName);
-            //    lstClubInfo.Items.Add("Club's Description: \t\t" + ClubsInfo.ClubDesc);
-            //}
-
         }
 
         private void cmbClubName_SelectedIndexChanged(object sender, EventArgs e)
@@ -69,6 +48,29 @@ namespace Clubs_Management_System
                 lstClubInfo.Items.Add("Vice President's Name: \t" + ClubsInfo.VPName);
                 lstClubInfo.Items.Add("Secretary's Name: \t\t" + ClubsInfo.SecName);
                 lstClubInfo.Items.Add("Club's Description: \t\t" + ClubsInfo.ClubDesc);
+            }
+        }
+
+        private void cmbClubName_Enter(object sender, EventArgs e)
+        {
+            //cntrl.DisplayAllClubs();
+            List<string> allClubs = new List<String>();
+            allClubs = cntrl.DisplayAllClubs();
+            cmbClubName.Items.Clear();
+            cmbClubName.Items.AddRange(allClubs.Cast<Object>().ToArray());
+            if (cmbClubName.Items.Count == 0)
+            {
+                cmbClubName.Items.Add("-Select");
+                cmbClubName.SelectedIndex = 0;
+            }
+        }
+
+        private void cmbClubName_Leave(object sender, EventArgs e)
+        {
+            if (cmbClubName.SelectedItem == null)
+            {
+                cmbClubName.Items.Insert(0, "-Select");
+                cmbClubName.SelectedIndex = 0;
             }
         }
     }

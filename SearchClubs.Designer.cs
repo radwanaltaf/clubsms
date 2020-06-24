@@ -73,6 +73,8 @@
             this.cmbClubName.Size = new System.Drawing.Size(1278, 49);
             this.cmbClubName.TabIndex = 6;
             this.cmbClubName.SelectedIndexChanged += new System.EventHandler(this.cmbClubName_SelectedIndexChanged);
+            this.cmbClubName.Enter += new System.EventHandler(this.cmbClubName_Enter);
+            this.cmbClubName.Leave += new System.EventHandler(this.cmbClubName_Leave);
             // 
             // lstClubInfo
             // 

@@ -52,7 +52,8 @@ namespace Clubs_Management_System
                || string.IsNullOrWhiteSpace(txtPresName.Text) || txtPresName.Text == "Enter President's Name"
                || string.IsNullOrWhiteSpace(txtVpName.Text) || txtVpName.Text == "Enter Vice President's Name"
                || string.IsNullOrWhiteSpace(txtSecName.Text) || txtSecName.Text == "Enter Secretary's Name"
-               || string.IsNullOrWhiteSpace(txtRegClubDesc.Text) || txtRegClubDesc.Text == "Enter Club's Description")
+               || string.IsNullOrWhiteSpace(txtRegClubDesc.Text) || txtRegClubDesc.Text == "Enter Club's Description"
+               || cmbClub.SelectedItem == null)
             {
                 MessageBox.Show("Please fill all the fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

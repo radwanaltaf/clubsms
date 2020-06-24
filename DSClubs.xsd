@@ -2,10 +2,11 @@
 <xs:schema id="dsClubs" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="2" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ClubsMSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ClubsMSConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Clubs_Management_System.Properties.Settings.GlobalReference.Default.ClubsMSConnectionString" Provider="System.Data.SqlClient" />
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ClubsMSConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ClubsMSConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Clubs_Management_System.Properties.Settings.GlobalReference.Default.ClubsMSConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ClubsMSConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ClubsMSConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Clubs_Management_System.Properties.Settings.GlobalReference.Default.ClubsMSConnectionString2" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ClubsTableAdapter" GeneratorDataComponentClassName="ClubsTableAdapter" Name="Clubs" UserDataComponentName="ClubsTableAdapter">
@@ -32,11 +33,12 @@ ORDER BY Club_Name</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ClubActivitiesTableAdapter" GeneratorDataComponentClassName="ClubActivitiesTableAdapter" Name="ClubActivities" UserDataComponentName="ClubActivitiesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ClubsMSConnectionString1 (Settings)" DbObjectName="dbo.ClubActivities" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ClubsMSConnectionString2 (Settings)" DbObjectName="dbo.ClubActivities" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT Club_Name, Activity_Name, Achievers_Name, Activitys_Date
 FROM  ClubActivities
+WHERE (Activitys_Date BETWEEN CONVERT(VARCHAR(10), GETDATE(), 101) AND DATEADD(day, 7, CONVERT(VARCHAR(10), GETDATE(), 101)))
 ORDER BY Club_Name</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -59,7 +61,7 @@ ORDER BY Club_Name</CommandText>
   <xs:element name="dsClubs" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsClubs" msprop:Generator_UserDSName="dsClubs">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Clubs" msprop:Generator_TableClassName="ClubsDataTable" msprop:Generator_TableVarName="tableClubs" msprop:Generator_RowChangedName="ClubsRowChanged" msprop:Generator_TablePropName="Clubs" msprop:Generator_RowDeletingName="ClubsRowDeleting" msprop:Generator_RowChangingName="ClubsRowChanging" msprop:Generator_RowEvHandlerName="ClubsRowChangeEventHandler" msprop:Generator_RowDeletedName="ClubsRowDeleted" msprop:Generator_RowClassName="ClubsRow" msprop:Generator_UserTableName="Clubs" msprop:Generator_RowEvArgName="ClubsRowChangeEvent">
+        <xs:element name="Clubs" msprop:Generator_TableClassName="ClubsDataTable" msprop:Generator_TableVarName="tableClubs" msprop:Generator_TablePropName="Clubs" msprop:Generator_RowDeletingName="ClubsRowDeleting" msprop:Generator_RowChangingName="ClubsRowChanging" msprop:Generator_RowEvHandlerName="ClubsRowChangeEventHandler" msprop:Generator_RowDeletedName="ClubsRowDeleted" msprop:Generator_UserTableName="Clubs" msprop:Generator_RowChangedName="ClubsRowChanged" msprop:Generator_RowEvArgName="ClubsRowChangeEvent" msprop:Generator_RowClassName="ClubsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Club_Name" msprop:Generator_ColumnVarNameInTable="columnClub_Name" msprop:Generator_ColumnPropNameInRow="Club_Name" msprop:Generator_ColumnPropNameInTable="Club_NameColumn" msprop:Generator_UserColumnName="Club_Name">
@@ -94,7 +96,7 @@ ORDER BY Club_Name</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ClubActivities" msprop:Generator_TableClassName="ClubActivitiesDataTable" msprop:Generator_TableVarName="tableClubActivities" msprop:Generator_TablePropName="ClubActivities" msprop:Generator_RowDeletingName="ClubActivitiesRowDeleting" msprop:Generator_RowChangingName="ClubActivitiesRowChanging" msprop:Generator_RowEvHandlerName="ClubActivitiesRowChangeEventHandler" msprop:Generator_RowDeletedName="ClubActivitiesRowDeleted" msprop:Generator_UserTableName="ClubActivities" msprop:Generator_RowChangedName="ClubActivitiesRowChanged" msprop:Generator_RowEvArgName="ClubActivitiesRowChangeEvent" msprop:Generator_RowClassName="ClubActivitiesRow">
+        <xs:element name="ClubActivities" msprop:Generator_TableClassName="ClubActivitiesDataTable" msprop:Generator_TableVarName="tableClubActivities" msprop:Generator_RowChangedName="ClubActivitiesRowChanged" msprop:Generator_TablePropName="ClubActivities" msprop:Generator_RowDeletingName="ClubActivitiesRowDeleting" msprop:Generator_RowChangingName="ClubActivitiesRowChanging" msprop:Generator_RowEvHandlerName="ClubActivitiesRowChangeEventHandler" msprop:Generator_RowDeletedName="ClubActivitiesRowDeleted" msprop:Generator_RowClassName="ClubActivitiesRow" msprop:Generator_UserTableName="ClubActivities" msprop:Generator_RowEvArgName="ClubActivitiesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Club_Name" msprop:Generator_ColumnVarNameInTable="columnClub_Name" msprop:Generator_ColumnPropNameInRow="Club_Name" msprop:Generator_ColumnPropNameInTable="Club_NameColumn" msprop:Generator_UserColumnName="Club_Name">
@@ -118,13 +120,7 @@ ORDER BY Club_Name</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Activitys_Date" msprop:Generator_ColumnVarNameInTable="columnActivitys_Date" msprop:Generator_ColumnPropNameInRow="Activitys_Date" msprop:Generator_ColumnPropNameInTable="Activitys_DateColumn" msprop:Generator_UserColumnName="Activitys_Date">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="Activitys_Date" msprop:Generator_ColumnVarNameInTable="columnActivitys_Date" msprop:Generator_ColumnPropNameInRow="Activitys_Date" msprop:Generator_ColumnPropNameInTable="Activitys_DateColumn" msprop:Generator_UserColumnName="Activitys_Date" type="xs:dateTime" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -27,6 +27,8 @@ namespace Clubs_Management_System
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.ControlBox = false;
+            dateOfActivity.MinDate = DateTime.Today;
+            dateOfActivity.MaxDate = DateTime.Today.AddDays(30);
             cntrl.LoggedInSecClub(LoggedInUser.Username);
         }
 
@@ -54,7 +56,7 @@ namespace Clubs_Management_System
                 }
                 else
                 {
-                    status = cntrl.UpdateClubActivity(LoggedInUser.ClubName, txtActivityName.Text, txtAchiever.Text, dateOfActivity.Value.ToString());
+                    status = cntrl.UpdateClubActivity(LoggedInUser.ClubName, txtActivityName.Text, txtAchiever.Text, dateOfActivity.Value.ToString(), txtClubAct.Text);
             
                     if(status > 0)
                     {

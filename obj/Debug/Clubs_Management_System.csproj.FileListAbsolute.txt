@@ -97,3 +97,4 @@ C:\Users\Radwan Altaf\Downloads\IOOP - C#\Assignment - Clubs MIS\Clubs_Managemen
 C:\Users\Radwan Altaf\Downloads\IOOP - C#\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\RdlCompile.cache
 C:\Users\Radwan Altaf\Downloads\IOOP - C#\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\RdlCompile.compiled
 C:\Users\Radwan Altaf\Downloads\IOOP - C#\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.csproj.CopyComplete
+C:\Users\Radwan Altaf\Downloads\IOOP - C#\Assignment - Clubs MIS\Clubs_Management_System\obj\Debug\Clubs_Management_System.RegisterDeactiveClub.resources

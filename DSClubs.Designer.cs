@@ -736,7 +736,7 @@ namespace Clubs_Management_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ClubActivitiesRow AddClubActivitiesRow(string Club_Name, string Activity_Name, string Achievers_Name, string Activitys_Date) {
+            public ClubActivitiesRow AddClubActivitiesRow(string Club_Name, string Activity_Name, string Achievers_Name, System.DateTime Activitys_Date) {
                 ClubActivitiesRow rowClubActivitiesRow = ((ClubActivitiesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Club_Name,
@@ -780,7 +780,7 @@ namespace Clubs_Management_System {
                 base.Columns.Add(this.columnActivity_Name);
                 this.columnAchievers_Name = new global::System.Data.DataColumn("Achievers_Name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAchievers_Name);
-                this.columnActivitys_Date = new global::System.Data.DataColumn("Activitys_Date", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnActivitys_Date = new global::System.Data.DataColumn("Activitys_Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnActivitys_Date);
                 this.columnClub_Name.AllowDBNull = false;
                 this.columnClub_Name.MaxLength = 50;
@@ -789,7 +789,6 @@ namespace Clubs_Management_System {
                 this.columnAchievers_Name.AllowDBNull = false;
                 this.columnAchievers_Name.MaxLength = 50;
                 this.columnActivitys_Date.AllowDBNull = false;
-                this.columnActivitys_Date.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1035,9 +1034,9 @@ namespace Clubs_Management_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Activitys_Date {
+            public System.DateTime Activitys_Date {
                 get {
-                    return ((string)(this[this.tableClubActivities.Activitys_DateColumn]));
+                    return ((global::System.DateTime)(this[this.tableClubActivities.Activitys_DateColumn]));
                 }
                 set {
                     this[this.tableClubActivities.Activitys_DateColumn] = value;
@@ -1421,7 +1420,7 @@ namespace Clubs_Management_System.dsClubsTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Clubs_Management_System.Properties.Settings.Default.ClubsMSConnectionString1;
+            this._connection.ConnectionString = global::Clubs_Management_System.Properties.Settings.Default.ClubsMSConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1431,7 +1430,8 @@ namespace Clubs_Management_System.dsClubsTableAdapters {
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Club_Name, Activity_Name, Achievers_Name, Activitys_Date\r\nFROM  ClubActivi" +
-                "ties\r\nORDER BY Club_Name";
+                "ties\r\nWHERE (Activitys_Date BETWEEN CONVERT(VARCHAR(10), GETDATE(), 101) AND DAT" +
+                "EADD(day, 7, CONVERT(VARCHAR(10), GETDATE(), 101)))\r\nORDER BY Club_Name";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

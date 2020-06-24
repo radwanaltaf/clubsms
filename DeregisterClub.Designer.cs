@@ -109,6 +109,8 @@
             this.cmbClubName.Name = "cmbClubName";
             this.cmbClubName.Size = new System.Drawing.Size(615, 45);
             this.cmbClubName.TabIndex = 9;
+            this.cmbClubName.DropDownClosed += new System.EventHandler(this.cmbClubName_DropDownClosed);
+            this.cmbClubName.Enter += new System.EventHandler(this.cmbClubName_Enter);
             // 
             // tableLayoutPanel1
             // 

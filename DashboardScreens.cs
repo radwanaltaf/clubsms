@@ -17,6 +17,7 @@ namespace Clubs_Management_System
         private ReportActivities _ReportActivitiesChild = null;
         private UpdateClubActivity _UpdateClubActivityChild = null;
         private Login _LoginChild = null;
+        private RegisterDeactiveClub _RegisterDeActiveClub= null;
 
         public DeregisterClub DeregisterChild { get => _DeregisterChild; set => _DeregisterChild = value; }
         public SearchClubs SearchChild { get => _SearchChild; set => _SearchChild = value; }
@@ -27,8 +28,6 @@ namespace Clubs_Management_System
         public ReportActivities ReportActivitiesChild { get => _ReportActivitiesChild; set => _ReportActivitiesChild = value; }
         public UpdateClubActivity UpdateClubActivityChild { get => _UpdateClubActivityChild; set => _UpdateClubActivityChild = value; }
         public Login LoginChild { get => _LoginChild; set => _LoginChild = value; }
-
-
-
+        public RegisterDeactiveClub RegisterDeactiveChil { get => _RegisterDeActiveClub; set => _RegisterDeActiveClub = value; }
     }
 }

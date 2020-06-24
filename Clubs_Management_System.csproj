@@ -74,6 +74,9 @@
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="DashboardScreens.cs" />
+    <Compile Include="DSClubs.cs">
+      <DependentUpon>DSClubs.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DSClubs.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -84,6 +87,12 @@
     </Compile>
     <Compile Include="DeregisterClub.Designer.cs">
       <DependentUpon>DeregisterClub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterDeactiveClub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterDeactiveClub.Designer.cs">
+      <DependentUpon>RegisterDeactiveClub.cs</DependentUpon>
     </Compile>
     <Compile Include="ReportActivities.cs">
       <SubType>Form</SubType>
@@ -147,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DeregisterClub.resx">
       <DependentUpon>DeregisterClub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterDeactiveClub.resx">
+      <DependentUpon>RegisterDeactiveClub.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportActivities.resx">
       <DependentUpon>ReportActivities.cs</DependentUpon>

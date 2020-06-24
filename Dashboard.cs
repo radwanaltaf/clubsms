@@ -42,7 +42,8 @@ namespace Clubs_Management_System
                     deregisterItem: deregisterClubToolStripMenuItem,
                     updateClubItem: updateClubToolStripMenuItem,
                     clubReportItem: clubReportToolStripMenuItem,
-                    activityReportItem: activitiesReportToolStripMenuItem);
+                    activityReportItem: activitiesReportToolStripMenuItem,
+                    RegDeactiveclub: registerDeactiveClubToolStripMenuItem);
 
                 //Load & Display the Search Screen by default on App load
                 if (DBScreen.SearchChild == null || DBScreen.SearchChild.IsDisposed)
@@ -61,7 +62,8 @@ namespace Clubs_Management_System
                     deregisterItem: deregisterClubToolStripMenuItem,
                     updateClubItem: updateClubToolStripMenuItem,
                     clubReportItem: clubReportToolStripMenuItem,
-                    activityReportItem: activitiesReportToolStripMenuItem);
+                    activityReportItem: activitiesReportToolStripMenuItem,
+                    RegDeactiveclub: registerDeactiveClubToolStripMenuItem);
 
                 //Load & Display the Update Club Activity Screen by default on App load
                 if (DBScreen.UpdateClubActivityChild == null || DBScreen.UpdateClubActivityChild.IsDisposed)
@@ -80,7 +82,8 @@ namespace Clubs_Management_System
                     deregisterItem: deregisterClubToolStripMenuItem,
                     updateClubItem: updateClubToolStripMenuItem,
                     clubReportItem: clubReportToolStripMenuItem,
-                    activityReportItem: activitiesReportToolStripMenuItem);
+                    activityReportItem: activitiesReportToolStripMenuItem,
+                    RegDeactiveclub: registerDeactiveClubToolStripMenuItem);
 
                 //Load & Display the Search Screen by default on App load
                 if (DBScreen.SearchChild == null || DBScreen.SearchChild.IsDisposed)
@@ -189,6 +192,16 @@ namespace Clubs_Management_System
             Login loginn = new Login();
             loginn.Show();
             loginn.Focus();
+        }
+
+        private void registerDeactiveClubToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (DBScreen.RegisterDeactiveChil == null || DBScreen.RegisterDeactiveChil.IsDisposed)
+            {
+                DBScreen.RegisterDeactiveChil = new RegisterDeactiveClub();
+                DBScreen.RegisterDeactiveChil.MdiParent = this;
+            }
+            Styles.DashboardShowScreen(DBScreen.RegisterDeactiveChil);
         }
     }
 }
