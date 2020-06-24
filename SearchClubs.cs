@@ -53,7 +53,6 @@ namespace Clubs_Management_System
 
         private void cmbClubName_Enter(object sender, EventArgs e)
         {
-            //cntrl.DisplayAllClubs();
             List<string> allClubs = new List<String>();
             allClubs = cntrl.DisplayAllClubs();
             cmbClubName.Items.Clear();
